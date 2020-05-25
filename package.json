@@ -5,6 +5,7 @@
     "prod": "cross-env NODE_ENV=production webpack --no-progress"
   },
   "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
     "copy-webpack-plugin": "^5.0.2",
     "cross-env": "^5.1",
     "css-loader": "^0.28.10",

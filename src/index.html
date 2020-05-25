@@ -17,29 +17,60 @@
     ></script>
   </head>
   <body
-    class="bg-gray-100 font-mono leading-normal tracking-normal"
+    class="bg-white font-mono leading-normal tracking-normal"
     x-data="loadIcons()"
   >
-    <input
-      onFocus="this.select()"
-      autofocus="autofocus"
-      x-ref="searchField"
-      x-model="search"
-      x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
-      placeholder="Search System UIcons"
-      type="text"
-      autocapitalize="off"
-      autocomplete="off"
-      autocorrect="off"
-      spellcheck="false"
-      class="flex flex-1 p-4 w-full focus:outline-none placeholder-gray-400 appearance-none text-black focus:text-black tracking-tighter text-xl lg:text-3xl xl:text-5xl"
-    />
+    <div class="bg-white px-8 py-4">
+      <input
+        onFocus="this.select()"
+        autofocus="autofocus"
+        x-ref="searchField"
+        x-model="search"
+        x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
+        placeholder="Search 420 System UIcons"
+        type="text"
+        autocapitalize="off"
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false"
+        class="flex flex-1 w-full py-4 focus:outline-none placeholder-gray-400 appearance-none text-black focus:text-black tracking-tighter text-xl lg:text-3xl xl:text-5xl"
+      />
+      <div
+        class="flex flex-row items-center border-t border-gray-300 bg-white pt-4"
+      >
+        <label class="inline-flex items-center">
+          <input
+            type="radio"
+            class="form-radio text-green-600 focus:outline-none"
+            name="clickType"
+            value="copy"
+            checked
+          />
+          <span class="ml-2">Copy SVG Code</span>
+        </label>
+        <label class="inline-flex items-center ml-6">
+          <input
+            type="radio"
+            class="form-radio text-green-600 focus:outline-none"
+            name="clickType"
+            value="download"
+          />
+          <span class="ml-2">Download SVGs</span>
+        </label>
+        <button
+          class="ml-auto p-3 rounded bg-black text-white hover:bg-gray-900"
+        >
+          Download All SVGs
+        </button>
+      </div>
+    </div>
     <div
       class="p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4"
     >
       <template x-for="item in filteredIcons" :key="item">
         <a
-          class="flex flex-col items-center justify-center text-gray-500 rounded shadow border border-transparent hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out transform p-10 h-48"
+          href="#"
+          class="flex flex-col items-center justify-center text-gray-500 rounded shadow border border-transparent hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out transform h-48"
         >
           <svg
             height="21"
@@ -78,6 +109,15 @@
         </a>
       </template>
     </div>
+    <footer class="p-8 border-t border-gray-300 text-gray-600">
+      Project by
+      <a
+        href="https://twitter.com/CoreyGinnivan"
+        target="_blank"
+        class="text-black"
+        >Corey Ginnivan</a
+      >
+    </footer>
     <script>
       var sourceData = [
         {
