@@ -7,10 +7,152 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
+      defer
+    ></script>
   </head>
-  <body>
-    <div class="min-h-screen flex items-center justify-center bg-teal-600">
-      <h1 class="text-5xl text-white font-sans">Hello World!</h1>
+  <body class="bg-grey-100 px-3 font-sans leading-normal tracking-normal">
+    <div class="container pt-8 mx-auto" x-data="loadEmployees()">
+      <input
+        x-ref="searchField"
+        x-model="search"
+        x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
+        placeholder="Search System UIcons"
+        type="search"
+        class="block w-full bg-gray-200 focus:outline-none focus:bg-white focus:shadow text-gray-700 font-bold rounded-lg px-4 py-3"
+      />
+      <div class="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <template x-for="item in filteredEmployees" :key="item">
+          <div
+            class="flex items-center justify-center shadow hover:shadow-md bg-white cursor-pointer rounded transition duration-150 ease-in-out transform p-10 h-48"
+          >
+            <div class="text-sm">
+              <p
+                class="text-gray-900 leading-none text-center"
+                x-text="item.employee_name"
+              ></p>
+            </div>
+          </div>
+        </template>
+      </div>
     </div>
+    <script>
+      var sourceData = [
+        {
+          id: "1",
+          employee_name: "Tiger Nixon",
+        },
+        {
+          id: "2",
+          employee_name: "Garrett Winters",
+        },
+        {
+          id: "3",
+          employee_name: "Ashton Cox",
+        },
+        {
+          id: "4",
+          employee_name: "Cedric Kelly",
+        },
+        {
+          id: "5",
+          employee_name: "Airi Satou",
+        },
+        {
+          id: "6",
+          employee_name: "Brielle Williamson",
+        },
+        {
+          id: "7",
+          employee_name: "Herrod Chandler",
+        },
+        {
+          id: "8",
+          employee_name: "Rhona Davidson",
+        },
+        {
+          id: "9",
+          employee_name: "Colleen Hurst",
+        },
+        {
+          id: "10",
+          employee_name: "Sonya Frost",
+        },
+        {
+          id: "11",
+          employee_name: "Jena Gaines",
+        },
+        {
+          id: "12",
+          employee_name: "Quinn Flynn",
+        },
+        {
+          id: "13",
+          employee_name: "Charde Marshall",
+        },
+        {
+          id: "14",
+          employee_name: "Haley Kennedy",
+        },
+        {
+          id: "15",
+          employee_name: "Tatyana Fitzpatrick",
+        },
+        {
+          id: "16",
+          employee_name: "Michael Silva",
+        },
+        {
+          id: "17",
+          employee_name: "Paul Byrd",
+        },
+        {
+          id: "18",
+          employee_name: "Gloria Little",
+        },
+        {
+          id: "19",
+          employee_name: "Bradley Greer",
+        },
+        {
+          id: "20",
+          employee_name: "Dai Rios",
+        },
+        {
+          id: "21",
+          employee_name: "Jenette Caldwell",
+        },
+        {
+          id: "22",
+          employee_name: "Yuri Berry",
+        },
+        {
+          id: "23",
+          employee_name: "Caesar Vance",
+        },
+        {
+          id: "24",
+          employee_name: "Doris Wilder",
+        },
+      ];
+
+      function loadEmployees() {
+        return {
+          search: "",
+          myForData: sourceData,
+          get filteredEmployees() {
+            if (this.search === "") {
+              return this.myForData;
+            }
+            return this.myForData.filter((item) => {
+              return item.employee_name
+                .toLowerCase()
+                .includes(this.search.toLowerCase());
+            });
+          },
+        };
+      }
+    </script>
   </body>
 </html>
