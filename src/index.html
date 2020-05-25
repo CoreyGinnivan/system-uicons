@@ -7,146 +7,251 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
       defer
     ></script>
   </head>
-  <body class="bg-grey-100 px-3 font-sans leading-normal tracking-normal">
-    <div class="container pt-8 mx-auto" x-data="loadEmployees()">
-      <input
-        x-ref="searchField"
-        x-model="search"
-        x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
-        placeholder="Search System UIcons"
-        type="search"
-        class="block w-full bg-gray-200 focus:outline-none focus:bg-white focus:shadow text-gray-700 font-bold rounded-lg px-4 py-3"
-      />
-      <div class="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        <template x-for="item in filteredEmployees" :key="item">
-          <div
-            class="flex items-center justify-center shadow hover:shadow-md bg-white cursor-pointer rounded transition duration-150 ease-in-out transform p-10 h-48"
+  <body
+    class="bg-gray-100 font-mono leading-normal tracking-normal"
+    x-data="loadIcons()"
+  >
+    <input
+      onFocus="this.select()"
+      autofocus="autofocus"
+      x-ref="searchField"
+      x-model="search"
+      x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
+      placeholder="Search System UIcons"
+      type="text"
+      autocapitalize="off"
+      autocomplete="off"
+      autocorrect="off"
+      spellcheck="false"
+      class="flex flex-1 p-4 w-full focus:outline-none placeholder-gray-400 appearance-none text-black focus:text-black tracking-tighter text-xl lg:text-3xl xl:text-5xl"
+    />
+    <div
+      class="p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4"
+    >
+      <template x-for="item in filteredIcons" :key="item">
+        <a
+          class="flex flex-col items-center justify-center text-gray-500 rounded shadow border border-transparent hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out transform p-10 h-48"
+        >
+          <svg
+            height="21"
+            viewBox="0 0 21 21"
+            width="21"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div class="text-sm">
-              <p
-                class="text-gray-900 leading-none text-center"
-                x-text="item.employee_name"
-              ></p>
-            </div>
-          </div>
-        </template>
-      </div>
+            <g
+              fill="none"
+              fill-rule="evenodd"
+              stroke="#2a2e3b"
+              stroke-linecap="round"
+              transform="translate(4 3)"
+            >
+              <path
+                d="m7.061 6.732.707 3.536-3.536-.707z"
+                fill="#2a2e3b"
+                transform="matrix(-.70710678 .70710678 -.70710678 -.70710678 16.253048 10.267767)"
+              />
+              <g stroke-linejoin="round">
+                <path d="m5.5 8.5h9" />
+                <path
+                  d="m4.50276494 1.99784965h-3.50491525c-.55228475 0-1 .44771525-1 1 0 .00081971.00000101.00163942.00000302.00245913l.00491223 1.99754087m0 6.00000005-.00491223 1.9975408c-.00135814.5522831.44525477 1.001098.99753785 1.0024561.00081971.000002.00163942.0000031.00245913.0000031h10.99753791c.5520446-.000615.9996604-.4479557 1.0006147-.9999999l.0061479-10.00000033c.0009541-.55228427-.4464858-1.00027469-.9987704-1.00061422-.000205-.00000013-.0004099-.00000019-.0006148.0006144h-2.50000006"
+                  transform="matrix(0 1 -1 0 14.498 1.498)"
+                />
+                <path
+                  d="m4.5.5h4c.55228475 0 1 .44771525 1 1s-.44771525 1-1 1h-4c-.55228475 0-1-.44771525-1-1s.44771525-1 1-1z"
+                />
+              </g>
+            </g>
+          </svg>
+          <p
+            class="text-xs leading-none text-center mt-8"
+            x-text="item.icon_name"
+          ></p>
+        </a>
+      </template>
     </div>
     <script>
       var sourceData = [
         {
           id: "1",
-          employee_name: "Tiger Nixon",
+          icon_name: "Cog",
         },
         {
           id: "2",
-          employee_name: "Garrett Winters",
+          icon_name: "User",
         },
         {
           id: "3",
-          employee_name: "Ashton Cox",
+          icon_name: "Heart",
         },
         {
           id: "4",
-          employee_name: "Cedric Kelly",
+          icon_name: "Filter",
         },
         {
           id: "5",
-          employee_name: "Airi Satou",
+          icon_name: "Add",
         },
         {
           id: "6",
-          employee_name: "Brielle Williamson",
+          icon_name: "Minus",
         },
         {
           id: "7",
-          employee_name: "Herrod Chandler",
+          icon_name: "Remove",
         },
         {
           id: "8",
-          employee_name: "Rhona Davidson",
+          icon_name: "Email",
         },
         {
           id: "9",
-          employee_name: "Colleen Hurst",
+          icon_name: "Battery",
         },
         {
           id: "10",
-          employee_name: "Sonya Frost",
+          icon_name: "Battery - Empty",
         },
         {
           id: "11",
-          employee_name: "Jena Gaines",
+          icon_name: "Battery - Half",
         },
         {
           id: "12",
-          employee_name: "Quinn Flynn",
+          icon_name: "Battery - Full",
         },
         {
           id: "13",
-          employee_name: "Charde Marshall",
+          icon_name: "Dashboard",
         },
         {
           id: "14",
-          employee_name: "Haley Kennedy",
+          icon_name: "External",
         },
         {
           id: "15",
-          employee_name: "Tatyana Fitzpatrick",
+          icon_name: "Send",
         },
         {
           id: "16",
-          employee_name: "Michael Silva",
+          icon_name: "Favourite",
         },
         {
           id: "17",
-          employee_name: "Paul Byrd",
+          icon_name: "News",
         },
         {
           id: "18",
-          employee_name: "Gloria Little",
+          icon_name: "Copy",
         },
         {
           id: "19",
-          employee_name: "Bradley Greer",
+          icon_name: "Duplicate",
         },
         {
           id: "20",
-          employee_name: "Dai Rios",
+          icon_name: "3D",
         },
         {
           id: "21",
-          employee_name: "Jenette Caldwell",
+          icon_name: "Cog",
         },
         {
           id: "22",
-          employee_name: "Yuri Berry",
+          icon_name: "User",
         },
         {
           id: "23",
-          employee_name: "Caesar Vance",
+          icon_name: "Heart",
         },
         {
           id: "24",
-          employee_name: "Doris Wilder",
+          icon_name: "Filter",
+        },
+        {
+          id: "25",
+          icon_name: "Add",
+        },
+        {
+          id: "26",
+          icon_name: "Minus",
+        },
+        {
+          id: "27",
+          icon_name: "Remove",
+        },
+        {
+          id: "28",
+          icon_name: "Email",
+        },
+        {
+          id: "29",
+          icon_name: "Battery",
+        },
+        {
+          id: "30",
+          icon_name: "Battery - Empty",
+        },
+        {
+          id: "31",
+          icon_name: "Battery - Half",
+        },
+        {
+          id: "32",
+          icon_name: "Battery - Full",
+        },
+        {
+          id: "33",
+          icon_name: "Dashboard",
+        },
+        {
+          id: "34",
+          icon_name: "External",
+        },
+        {
+          id: "35",
+          icon_name: "Send",
+        },
+        {
+          id: "36",
+          icon_name: "Favourite",
+        },
+        {
+          id: "37",
+          icon_name: "News",
+        },
+        {
+          id: "38",
+          icon_name: "Copy",
+        },
+        {
+          id: "39",
+          icon_name: "Duplicate",
+        },
+        {
+          id: "40",
+          icon_name: "3D",
         },
       ];
 
-      function loadEmployees() {
+      function loadIcons() {
         return {
           search: "",
           myForData: sourceData,
-          get filteredEmployees() {
+          get filteredIcons() {
             if (this.search === "") {
               return this.myForData;
             }
             return this.myForData.filter((item) => {
-              return item.employee_name
+              return item.icon_name
                 .toLowerCase()
                 .includes(this.search.toLowerCase());
             });
