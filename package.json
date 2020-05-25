@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "prod": "cross-env NODE_ENV=production webpack --no-progress"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.2",
+    "cross-env": "^5.1",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "glob-all": "^3.1.0",
+    "html-webpack-plugin": "^3.0.6",
+    "postcss": "^6.0.19",
+    "postcss-loader": "^2.1.1",
+    "purgecss-webpack-plugin": "^1.4.0",
+    "style-loader": "^0.20.3",
+    "tailwindcss": "^1.0.0-beta.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
