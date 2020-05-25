@@ -16,7 +16,7 @@
     "postcss-loader": "^2.1.1",
     "purgecss-webpack-plugin": "^1.4.0",
     "style-loader": "^0.20.3",
-    "tailwindcss": "^1.0.0-beta.3",
+    "tailwindcss": "^1.4.5",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
