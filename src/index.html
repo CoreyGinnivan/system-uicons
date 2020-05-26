@@ -108,7 +108,7 @@
           href="#"
           class="flex flex-col items-center justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-48"
         >
-          <img x-bind:src="item.icon_path" alt="copy" />
+          <img x-bind:src="item.icon_path" x-bind:alt="item.icon_name" />
           <p
             class="text-xs leading-none text-center mt-8"
             x-text="item.icon_name"
@@ -117,8 +117,10 @@
         </a>
       </template>
     </div>
-    <footer class="py-8 mx-8 border-t border-gray-300 text-gray-600">
-      Project by
+    <footer
+      class="flex flex-row py-8 mx-8 border-t border-gray-300 text-gray-600"
+    >
+      Project by&nbsp;
       <a
         href="https://twitter.com/CoreyGinnivan"
         rel="noreferrer"
@@ -126,6 +128,7 @@
         class="text-black hover:underline"
         >Corey Ginnivan</a
       >
+      <span class="ml-auto">Use how you want, without attribution</span>
     </footer>
     <script>
       var sourceData = [

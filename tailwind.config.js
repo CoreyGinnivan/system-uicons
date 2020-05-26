@@ -1,4 +1,5 @@
 module.exports = {
+  purge: ["./src/**/*.html"],
   theme: {
     fontFamily: {
       mono: [
