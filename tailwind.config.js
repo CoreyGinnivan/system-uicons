@@ -9,5 +9,7 @@ module.exports = {
   variants: {
     // Some useful comment
   },
-  plugins: [require("@tailwindcss/custom-forms")],
+  plugins: [
+    // Some useful comment
+  ],
 };
