@@ -17,7 +17,7 @@
     ></script>
   </head>
   <body
-    class="bg-white font-mono leading-normal tracking-normal"
+    class="bg-white font-mono leading-normal tracking-normal min-h-screen"
     x-data="loadIcons()"
   >
     <div class="bg-white px-8 py-4">
@@ -40,29 +40,35 @@
       <div
         class="flex flex-col space-y-4 md:space-y-0 md:flex-row border-t border-gray-300 bg-white pt-4"
       >
-        <label class="inline-flex items-center">
+        <label
+          class="inline-flex items-center cursor-pointer rounded px-2 hover:bg-gray-900 hover:text-white"
+        >
           <input
             type="radio"
-            class="form-radio text-green-600"
+            class="form-radio"
             name="clickType"
             value="copy"
             checked
           />
           <span class="ml-2">Copy SVG Code</span>
         </label>
-        <label class="inline-flex items-center md:ml-6">
+        <label
+          class="inline-flex items-center md:ml-6 cursor-pointer rounded px-2 hover:bg-gray-900 hover:text-white"
+        >
           <input
             type="radio"
-            class="form-radio text-green-600"
+            class="form-radio"
             name="clickType"
             value="link"
           />
           <span class="ml-2">&lt;img/&gt; Link</span>
         </label>
-        <label class="inline-flex items-center md:ml-6">
+        <label
+          class="inline-flex items-center md:ml-6 cursor-pointer rounded px-2 hover:bg-gray-900 hover:text-white"
+        >
           <input
             type="radio"
-            class="form-radio text-green-600"
+            class="form-radio"
             name="clickType"
             value="download"
           />
