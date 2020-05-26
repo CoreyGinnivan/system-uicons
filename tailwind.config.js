@@ -8,7 +8,7 @@ module.exports = {
     },
   },
   variants: {
-    // Some useful comment
+    scale: ["responsive", "hover", "focus", "group-hover"],
   },
   plugins: [
     // Some useful comment
