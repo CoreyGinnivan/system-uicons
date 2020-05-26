@@ -1,9 +1,9 @@
-const path = require("path")
-const glob = require("glob-all")
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const CopyWebpackPlugin = require("copy-webpack-plugin")
-const PurgecssPlugin = require("purgecss-webpack-plugin")
+const path = require("path");
+const glob = require("glob-all");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const PurgecssPlugin = require("purgecss-webpack-plugin");
 
 /**
  * Custom PurgeCSS Extractor
@@ -12,7 +12,7 @@ const PurgecssPlugin = require("purgecss-webpack-plugin")
  */
 class TailwindExtractor {
   static extract(content) {
-    return content.match(/[A-z0-9-:\/]+/g)
+    return content.match(/[A-z0-9-:\/]+/g);
   }
 }
 
@@ -42,12 +42,12 @@ module.exports = {
       template: "src/index.html",
     }),
     /// Enable images folder
-    // new CopyWebpackPlugin([
-    //   {
-    //     from: "src/images",
-    //     to: "images",
-    //   },
-    // ]),
+    new CopyWebpackPlugin([
+      {
+        from: "src/images",
+        to: "images",
+      },
+    ]),
     new PurgecssPlugin({
       paths: glob.sync([path.join(__dirname, "src/**/*.html")]),
       extractors: [
@@ -58,4 +58,4 @@ module.exports = {
       ],
     }),
   ],
-}
+};
