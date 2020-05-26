@@ -22,6 +22,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "alpinejs": "^2.3.5"
+    "alpinejs": "^2.3.5",
+    "typeface-roboto-mono": "^0.0.75"
   }
 }
