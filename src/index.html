@@ -20,111 +20,118 @@
     />
   </head>
   <body
-    class="bg-white font-mono leading-normal tracking-normal min-h-screen"
+    class="bg-white font-mono leading-normal tracking-normal flex flex-col min-h-screen"
     x-data="loadIcons()"
   >
-    <div class="bg-white px-8 py-4">
-      <input
-        onFocus="this.select()"
-        autofocus="autofocus"
-        x-ref="searchField"
-        x-model="search"
-        x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
-        placeholder="Search 420 System UIcons"
-        type="text"
-        name="search"
-        value=""
-        autocapitalize="off"
-        autocomplete="off"
-        autocorrect="off"
-        spellcheck="false"
-        class="flex flex-1 w-full py-4 focus:outline-none placeholder-gray-400 appearance-none text-black focus:text-black tracking-tighter text-xl lg:text-3xl xl:text-5xl"
-      />
-    </div>
-    <div
-      class="flex flex-col space-y-4 md:space-y-0 md:flex-row border-t border-gray-300 bg-white py-4 px-8 sticky top-0 z-10"
-    >
-      <label
-        class="inline-flex items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
-      >
+    <main class="flex-grow">
+      <div class="bg-white px-8 py-4">
         <input
-          type="radio"
-          class="form-radio"
-          name="clickType"
-          value="copy"
-          checked
+          onFocus="this.select()"
+          autofocus="autofocus"
+          x-ref="searchField"
+          x-model="search"
+          x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
+          placeholder="Search 420 System UIcons"
+          type="text"
+          name="search"
+          value=""
+          autocapitalize="off"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+          class="flex flex-1 w-full py-4 focus:outline-none placeholder-gray-400 appearance-none text-black focus:text-black tracking-tighter text-xl lg:text-3xl xl:text-5xl"
         />
-        <span class="ml-2">Copy SVG Code</span>
-      </label>
-      <label
-        class="inline-flex items-center md:ml-2 lg:ml-4 cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
+      </div>
+      <div
+        class="flex flex-col space-y-4 md:space-y-0 md:flex-row border-t border-gray-300 bg-white py-4 px-8 sticky top-0 z-10"
       >
-        <input type="radio" class="form-radio" name="clickType" value="link" />
-        <span class="ml-2">Copy Source Link</span>
-      </label>
-      <label
-        class="inline-flex items-center md:ml-2 lg:ml-4 cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
-      >
-        <input
-          type="radio"
-          class="form-radio"
-          name="clickType"
-          value="download"
-        />
-        <span class="ml-2">Download SVGs</span>
-      </label>
-      <button
-        class="flex flex-row items-center ml-auto p-3 rounded bg-black text-white text-sm lg:text-base hover:bg-gray-900 w-full md:w-auto"
-      >
-        <span class="mr-4">
-          <svg
-            height="21"
-            viewBox="0 0 21 21"
-            width="21"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="none"
-              fill-rule="evenodd"
-              stroke="currentcolor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              transform="translate(4 3)"
-            >
-              <path
-                d="m9.221 4.716.165 5.821-5.792-.135"
-                transform="matrix(-.70710678 .70710678 .70710678 .70710678 5.685139 -2.354861)"
-              />
-              <path d="m6.5.5v11" />
-              <path d="m.5 14.5h12" />
-            </g>
-          </svg>
-        </span>
-        Download All SVGs
-      </button>
-    </div>
-    <div
-      class="p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4"
-    >
-      <template x-for="(item, index) in filteredIcons" :key="index">
-        <a
-          href="#"
-          class="flex flex-col items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-48"
+        <label
+          class="inline-flex items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
         >
-          <img
-            :src="`images/` + item.icon_path + `.svg`"
-            :alt="item.icon_name"
-            class="transform transition duration-200 group-hover:scale-150"
-            loading="lazy"
+          <input
+            type="radio"
+            class="form-radio"
+            name="clickType"
+            value="copy"
+            checked
           />
-          <p
-            class="text-xs leading-none text-center mt-8"
-            x-text="item.icon_name"
-          ></p>
-          <span class="hidden" x-text="item.icon_keywords"></span>
-        </a>
-      </template>
-    </div>
+          <span class="ml-2">Copy SVG Code</span>
+        </label>
+        <label
+          class="inline-flex items-center md:ml-2 lg:ml-4 cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
+        >
+          <input
+            type="radio"
+            class="form-radio"
+            name="clickType"
+            value="link"
+          />
+          <span class="ml-2">Copy Source Link</span>
+        </label>
+        <label
+          class="inline-flex items-center md:ml-2 lg:ml-4 cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
+        >
+          <input
+            type="radio"
+            class="form-radio"
+            name="clickType"
+            value="download"
+          />
+          <span class="ml-2">Download SVGs</span>
+        </label>
+        <button
+          class="flex flex-row items-center ml-auto p-3 rounded bg-black text-white text-sm lg:text-base hover:bg-gray-900 w-full md:w-auto"
+        >
+          <span class="mr-4">
+            <svg
+              height="21"
+              viewBox="0 0 21 21"
+              width="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                fill="none"
+                fill-rule="evenodd"
+                stroke="currentcolor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                transform="translate(4 3)"
+              >
+                <path
+                  d="m9.221 4.716.165 5.821-5.792-.135"
+                  transform="matrix(-.70710678 .70710678 .70710678 .70710678 5.685139 -2.354861)"
+                />
+                <path d="m6.5.5v11" />
+                <path d="m.5 14.5h12" />
+              </g>
+            </svg>
+          </span>
+          Download All SVGs
+        </button>
+      </div>
+      <div
+        class="p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4"
+      >
+        <template x-for="(item, index) in filteredIcons" :key="index">
+          <a
+            href="#"
+            class="flex flex-col items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-48"
+          >
+            <img
+              :src="`images/` + item.icon_path + `.svg`"
+              :alt="item.icon_name"
+              class="transform transition duration-200 group-hover:scale-150"
+              loading="lazy"
+            />
+            <p
+              class="text-xs leading-none text-center mt-8"
+              x-text="item.icon_name"
+            ></p>
+            <span class="hidden" x-text="item.icon_keywords"></span>
+          </a>
+        </template>
+      </div>
+    </main>
     <footer
       class="flex flex-col space-y-4 md:space-y-0 md:flex-row py-8 mx-8 border-t border-gray-300 text-gray-700"
     >
