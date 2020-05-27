@@ -109,13 +109,14 @@
           Download All SVGs
         </button>
       </div>
+
       <div
         class="p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4"
       >
         <template x-for="(item, index) in filteredIcons" :key="index">
           <a
             href="#"
-            class="flex flex-col items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-48"
+            class="flex flex-col relative items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-48"
           >
             <img
               :src="`images/` + item.icon_path + `.svg`"
@@ -184,7 +185,13 @@
         {
           icon_name: "Speech Bubble (Writing)",
           icon_path: "speech_typing",
-          icon_keywords: "speech bubble, chat, speak, typing, writing, waiting",
+          icon_keywords:
+            "speech bubble, chat, speak, speech typing, writing, waiting",
+        },
+        {
+          icon_name: "Speech Bubble (Add)",
+          icon_path: "chat_add",
+          icon_keywords: "chat bubble speech speak message new add",
         },
         {
           icon_name: "Paperclip",
@@ -1170,11 +1177,6 @@
           icon_name: "Toggle",
           icon_path: "toggle",
           icon_keywords: "toggle",
-        },
-        {
-          icon_name: "Chat (Add)",
-          icon_path: "chat_add",
-          icon_keywords: "chat bubble speech message new add",
         },
         {
           icon_name: "circle",
