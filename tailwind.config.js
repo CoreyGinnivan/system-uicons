@@ -9,6 +9,7 @@ module.exports = {
   },
   variants: {
     scale: ["responsive", "hover", "focus", "group-hover"],
+    backgroundColor: ["responsive", "hover", "focus", "focus-within"],
   },
   plugins: [
     // Some useful comment

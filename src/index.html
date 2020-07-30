@@ -31,7 +31,7 @@
           x-ref="searchField"
           x-model="search"
           x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
-          placeholder="Search 420 System UIcons"
+          x-bind:placeholder="'Search ' + myForData.length + ' System UIcons'"
           type="text"
           name="search"
           value=""
@@ -45,40 +45,48 @@
       <div
         class="flex flex-col space-y-4 md:space-y-0 md:flex-row border-t border-gray-300 bg-white py-4 px-8 sticky top-0 z-10"
       >
-        <label
-          class="inline-flex items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
-        >
-          <input
-            type="radio"
-            class="form-radio"
-            name="clickType"
-            value="copy"
-            checked
-          />
-          <span class="ml-2">Copy SVG Code</span>
-        </label>
-        <label
-          class="inline-flex items-center md:ml-2 lg:ml-4 cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
-        >
-          <input
-            type="radio"
-            class="form-radio"
-            name="clickType"
-            value="link"
-          />
-          <span class="ml-2">Copy CDN Link</span>
-        </label>
-        <label
-          class="inline-flex items-center md:ml-2 lg:ml-4 cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
-        >
-          <input
-            type="radio"
-            class="form-radio"
-            name="clickType"
-            value="download"
-          />
-          <span class="ml-2">Download SVGs</span>
-        </label>
+        <div class="bg-gray-200 p-1 rounded">
+          <label
+            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900"
+            :class="downloadType === 'copy-svg' ? 'bg-white shadow' : 'text-blue-500 hover:text-blue-800'"
+          >
+            <input
+              type="radio"
+              class="form-radio"
+              name="copy-svg"
+              x-model="downloadType"
+              :value="'copy-svg'"
+              checked
+            />
+            <span class="ml-2">Copy SVG Code</span>
+          </label>
+          <label
+            class="inline-flex h-full items-center md:ml-2 lg:ml-4 cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
+            :class="downloadType === 'copy-cdn' ? 'bg-white shadow' : 'text-blue-500 hover:text-blue-800'"
+          >
+            <input
+              type="radio"
+              class="form-radio"
+              name="copy-cdn"
+              x-model="downloadType"
+              :value="'copy-cdn'"
+            />
+            <span class="ml-2">Copy CDN Link</span>
+          </label>
+          <label
+            class="inline-flex h-full items-center md:ml-2 lg:ml-4 cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-900 hover:text-white"
+            :class="downloadType === 'download-svg' ? 'bg-white shadow' : 'text-blue-500 hover:text-blue-800'"
+          >
+            <input
+              type="radio"
+              class="form-radio"
+              name="download-svg"
+              x-model="downloadType"
+              :value="'download-svg'"
+            />
+            <span class="ml-2">Download SVGs</span>
+          </label>
+        </div>
         <button
           class="flex flex-row items-center ml-auto p-3 rounded bg-black text-white text-sm lg:text-base hover:bg-gray-900 w-full md:w-auto"
         >
@@ -115,8 +123,16 @@
       >
         <template x-for="(item, index) in filteredIcons" :key="index">
           <a
-            href="#"
+            href=""
+            x-bind:href="document.location.protocol +
+            '//' +
+            document.location.host +
+            `/images/` +
+            item.icon_path +
+            `.svg`"
+            x-bind:download="downloadType === 'download-svg' && item.icon_name"
             class="flex flex-col relative items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-48"
+            @click="handleClick(item, downloadType, $event)"
           >
             <img
               :src="`images/` + item.icon_path + `.svg`"
@@ -1258,6 +1274,7 @@
       function loadIcons() {
         return {
           search: "",
+          downloadType: "copy-svg",
           myForData: sourceData,
           get filteredIcons() {
             if (this.search === "") {
@@ -1268,6 +1285,32 @@
                 .toLowerCase()
                 .includes(this.search.toLowerCase());
             });
+          },
+          handleClick(item, downloadType, event) {
+            console.log(item.icon_name, downloadType);
+            if (downloadType === "copy-svg") {
+              event.preventDefault();
+              var url =
+                document.location.protocol +
+                "//" +
+                document.location.host +
+                `/images/` +
+                item.icon_path +
+                `.svg`;
+              fetch(url).then(function (response) {
+                if (response.ok) {
+                  response.text().then(function (svg) {
+                    navigator.clipboard.writeText(svg);
+                  });
+                }
+              });
+            }
+            if (downloadType === "copy-cdn") {
+              event.preventDefault();
+              var url =
+                document.location.host + `/images/` + item.icon_path + `.svg`;
+              navigator.clipboard.writeText(url);
+            }
           },
         };
       }
