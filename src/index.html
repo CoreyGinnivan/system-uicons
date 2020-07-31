@@ -60,11 +60,13 @@
         />
       </div>
       <div
-        class="flex flex-col space-y-4 md:space-y-0 md:flex-row border-t border-gray-300 bg-white py-4 px-8 sticky top-0 z-10"
+        class="flex flex-col space-y-2 md:space-y-0 md:flex-row border-t border-gray-300 bg-white py-4 px-2 lg:px-8 sticky top-0 z-10"
       >
-        <div class="bg-gray-200 p-1 rounded">
+        <div
+          class="flex flex-col md:flex-row bg-gray-200 p-1 rounded space-x-0 md:space-x-2 space-y-2 md:space-y-0"
+        >
           <label
-            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black transition duration-200"
+            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black transition duration-200 py-2 w-full md:w-auto md:py-0 flex-no-wrap"
             :class="downloadType === 'copy-svg' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -75,10 +77,37 @@
               :value="'copy-svg'"
               checked
             />
-            <span>Copy SVG Code</span>
+            <span class="mr-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="currentcolor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  transform="translate(2 3)"
+                >
+                  <line x1="10.5" x2="6.5" y1=".5" y2="14.5" />
+                  <polyline
+                    points="7.328 2.672 7.328 8.328 1.672 8.328"
+                    transform="rotate(135 4.5 5.5)"
+                  />
+                  <polyline
+                    points="15.328 6.672 15.328 12.328 9.672 12.328"
+                    transform="scale(1 -1) rotate(-45 -10.435 0)"
+                  />
+                </g>
+              </svg>
+            </span>
+            <span class="whitespace-no-wrap">Copy SVG Code</span>
           </label>
           <label
-            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black transition duration-200"
+            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black transition duration-200 py-2 w-full md:w-auto md:py-0 flex-no-wrap"
             :class="downloadType === 'copy-cdn' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -88,10 +117,35 @@
               x-model="downloadType"
               :value="'copy-cdn'"
             />
-            <span>Copy CDN Link</span>
+            <span class="mr-2">
+              <svg
+                height="21"
+                viewBox="0 0 21 21"
+                width="21"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="currentcolor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  transform="translate(4 4)"
+                >
+                  <path
+                    d="m5.5 7.5c.96940983 1.36718798 3.01111566 1.12727011 4.01111565 0l1.98888435-2c1.1243486-1.22807966 1.1641276-2.81388365 0-4-1.135619-1.15706921-2.86438099-1.15706947-4 0l-2 2"
+                  />
+                  <path
+                    d="m.64175661 12.3971156c.96940983 1.367188 3 1.1970433 4 .0697732l2-1.9748738c1.12434863-1.22807961 1.16412758-2.83900987 0-4.02512622-1.13561902-1.15706922-2.86438099-1.15706948-4 0l-2 2"
+                    transform="matrix(-1 0 0 -1 8.14 18.966)"
+                  />
+                </g>
+              </svg>
+            </span>
+            <span class="whitespace-no-wrap">Copy CDN Link</span>
           </label>
           <label
-            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black transition duration-200"
+            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black transition duration-200 py-2 w-full md:w-auto md:py-0 flex-no-wrap"
             :class="downloadType === 'download-svg' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -101,7 +155,31 @@
               x-model="downloadType"
               :value="'download-svg'"
             />
-            <span>Download SVGs</span>
+            <span class="mr-2">
+              <svg
+                height="21"
+                viewBox="0 0 21 21"
+                width="21"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="currentcolor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  transform="translate(4 3)"
+                >
+                  <path
+                    d="m9.221 4.716.165 5.821-5.792-.135"
+                    transform="matrix(-.70710678 .70710678 .70710678 .70710678 5.685139 -2.354861)"
+                  />
+                  <path d="m6.5.5v11" />
+                  <path d="m.5 14.5h12" />
+                </g>
+              </svg>
+            </span>
+            <span class="whitespace-no-wrap">Download SVG Icons</span>
           </label>
         </div>
         <a
@@ -109,7 +187,7 @@
           class="flex flex-row items-center ml-auto p-3 rounded bg-black text-white text-sm lg:text-base hover:bg-gray-900 w-full md:w-auto"
           download
         >
-          <span class="mr-4">
+          <span class="mr-2">
             <svg
               height="21"
               viewBox="0 0 21 21"
@@ -133,12 +211,12 @@
               </g>
             </svg>
           </span>
-          Download All SVGs
+          <span class="whitespace-no-wrap">Download All Icons</span>
         </a>
       </div>
 
       <div
-        class="p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4"
+        class="p-2 lg:p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4"
       >
         <template x-for="(item, index) in filteredIcons" :key="index">
           <a
