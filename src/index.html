@@ -47,7 +47,7 @@
       >
         <div class="bg-gray-200 p-1 rounded">
           <label
-            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black"
+            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black transition duration-200"
             :class="downloadType === 'copy-svg' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -61,7 +61,7 @@
             <span>Copy SVG Code</span>
           </label>
           <label
-            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black"
+            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black transition duration-200"
             :class="downloadType === 'copy-cdn' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -74,7 +74,7 @@
             <span>Copy CDN Link</span>
           </label>
           <label
-            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black"
+            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-white hover:text-black transition duration-200"
             :class="downloadType === 'download-svg' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -118,6 +118,24 @@
         </button>
       </div>
 
+      <div x-data="{ copied: false }">
+        <div
+          role="alert"
+          x-show="copied"
+          x-on:show:toast.document="copied = !copied"
+          x-cloak
+          class="rounded bg-black p-2 fixed top-0 left-0 right-0 text-sm text-white w-24 text-center mx-auto mt-4"
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0 transform scale-90"
+          x-transition:enter-end="opacity-100 transform scale-100"
+          x-transition:leave="transition ease-in duration-300"
+          x-transition:leave-start="opacity-100 transform scale-100"
+          x-transition:leave-end="opacity-0 transform scale-90"
+        >
+          Copied!
+        </div>
+      </div>
+
       <div
         class="p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4"
       >
@@ -132,7 +150,7 @@
             `.svg`"
             x-bind:download="downloadType === 'download-svg' && item.icon_name"
             class="flex flex-col relative items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-48"
-            @click="handleClick(item, downloadType, $event)"
+            @click="handleClick(item, downloadType, $event), $dispatch('show:toast'), setTimeout(() => $dispatch('show:toast'), 2000)"
           >
             <img
               :src="`images/` + item.icon_path + `.svg`"
@@ -1287,7 +1305,6 @@
             });
           },
           handleClick(item, downloadType, event) {
-            console.log(item.icon_name, downloadType);
             if (downloadType === "copy-svg") {
               event.preventDefault();
               var url =
