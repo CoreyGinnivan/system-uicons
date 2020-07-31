@@ -1,6 +1,8 @@
 {
   "private": true,
   "scripts": {
+    "zip": "node createZip.js",
+    "prebuild": "npm run zip",
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "prod": "cross-env NODE_ENV=production webpack --no-progress"
   },
@@ -23,6 +25,7 @@
   },
   "dependencies": {
     "alpinejs": "^2.3.5",
+    "archiver": "^5.0.0",
     "typeface-roboto-mono": "^0.0.75"
   }
 }
