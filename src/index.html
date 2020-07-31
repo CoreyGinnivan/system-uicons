@@ -154,7 +154,7 @@
             @click="handleClick(item, downloadType, $event), $dispatch('show:toast'), setTimeout(() => $dispatch('show:toast'), 2000)"
           >
             <img
-              :src="`images/` + item.icon_path + `.svg`"
+              :src="`images/icons/` + item.icon_path + `.svg`"
               :alt="item.icon_name"
               class="transform transition duration-200 group-hover:scale-150"
               loading="lazy"
