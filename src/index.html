@@ -1326,6 +1326,8 @@
             if (downloadType === "copy-cdn") {
               event.preventDefault();
               var url =
+                document.location.protocol +
+                "//" +
                 document.location.host +
                 `/images/icons/` +
                 item.icon_path +
