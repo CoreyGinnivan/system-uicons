@@ -245,7 +245,7 @@
             class="flex flex-col relative items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-32 md:h-40"
             @click="handleClick(item, downloadType, $event), $dispatch('show:toast', item.icon_name), setTimeout(() => $dispatch('show:toast', false), 1000)"
           >
-            <div x-data="{ copied: false }">
+            <div>
               <div
                 role="alert"
                 x-show="copied === item.icon_name"
@@ -1410,6 +1410,7 @@
           search: "",
           downloadType: "copy-svg",
           myForData: sourceData,
+          copied: false,
           get filteredIcons() {
             if (this.search === "") {
               return this.myForData;
