@@ -55,23 +55,6 @@
     x-data="loadIcons()"
   >
     <main class="flex-grow">
-      <div x-data="{ copied: false }">
-        <div
-          role="alert"
-          x-show="copied"
-          x-on:show:toast.document="copied = !copied"
-          x-cloak
-          class="rounded bg-black p-2 fixed top-0 left-0 right-0 text-sm text-white w-24 text-center mx-auto mt-4 z-50"
-          x-transition:enter="transition ease-out duration-300"
-          x-transition:enter-start="opacity-0 transform scale-90"
-          x-transition:enter-end="opacity-100 transform scale-100"
-          x-transition:leave="transition ease-in duration-300"
-          x-transition:leave-start="opacity-100 transform scale-100"
-          x-transition:leave-end="opacity-0 transform scale-90"
-        >
-          Copied!
-        </div>
-      </div>
       <div class="bg-white px-8 py-4">
         <input
           onFocus="this.select()"
@@ -260,8 +243,25 @@
             `.svg`"
             x-bind:download="downloadType === 'download-svg' && item.icon_name"
             class="flex flex-col relative items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-32 md:h-48"
-            @click="handleClick(item, downloadType, $event), $dispatch('show:toast'), setTimeout(() => $dispatch('show:toast'), 2000)"
+            @click="handleClick(item, downloadType, $event), $dispatch('show:toast'), setTimeout(() => $dispatch('show:toast'), 1000)"
           >
+            <div x-data="{ copied: false }">
+              <div
+                role="alert"
+                x-show="copied"
+                x-on:show:toast.document="copied = !copied"
+                x-cloak
+                class="rounded bg-black p-1 absolute top-0 -mt-8 left-0 right-0 text-sm text-white w-16 text-center mx-auto z-50"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 transform scale-90"
+                x-transition:enter-end="opacity-100 transform scale-100"
+                x-transition:leave="transition ease-in duration-500 "
+                x-transition:leave-start="opacity-100 transform scale-100"
+                x-transition:leave-end="opacity-0 transform scale-90"
+              >
+                Copied
+              </div>
+            </div>
             <img
               :src="`images/icons/` + item.icon_path + `.svg`"
               :alt="item.icon_name"
