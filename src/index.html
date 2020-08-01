@@ -260,9 +260,15 @@
                 x-transition:leave-start="opacity-100 transform scale-100"
                 x-transition:leave-end="opacity-0 transform scale-90"
               >
-                <template x-if="downloadType == 'download-svg'">Downloading!</template>
-                <template x-if="downloadType == 'copy-cdn'">Copied URL</template>
-                <template x-if="downloadType == 'copy-svg'">Copied SVG Code</template>
+                <template x-if="downloadType == 'download-svg'"
+                  ><span>Downloading!</span></template
+                >
+                <template x-if="downloadType == 'copy-cdn'"
+                  ><span>Copied URL</span></template
+                >
+                <template x-if="downloadType == 'copy-svg'"
+                  ><span>Copied SVG Code</span></template
+                >
               </div>
             </div>
             <img
@@ -1437,8 +1443,8 @@
                 if (response.ok) {
                   response.text().then(function (svg) {
                     navigator.clipboard.writeText(svg);
-                    $dispatch('show:toast', item.icon_name)
-                    setTimeout(() => $dispatch('show:toast', false), 1000)
+                    $dispatch("show:toast", item.icon_name);
+                    setTimeout(() => $dispatch("show:toast", false), 1000);
                   });
                 }
               });
@@ -1453,12 +1459,12 @@
                 item.icon_path +
                 `.svg`;
               navigator.clipboard.writeText(url);
-              
-              $dispatch('show:toast', item.icon_name)
-              setTimeout(() => $dispatch('show:toast', false), 1000)
+
+              $dispatch("show:toast", item.icon_name);
+              setTimeout(() => $dispatch("show:toast", false), 1000);
             } else {
-              $dispatch('show:toast', item.icon_name)
-              setTimeout(() => $dispatch('show:toast', false), 1000)
+              $dispatch("show:toast", item.icon_name);
+              setTimeout(() => $dispatch("show:toast", false), 1000);
             }
           },
         };
