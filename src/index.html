@@ -259,7 +259,7 @@
             item.icon_path +
             `.svg`"
             x-bind:download="downloadType === 'download-svg' && item.icon_name"
-            class="flex flex-col relative items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-48"
+            class="flex flex-col relative items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-32 md:h-48"
             @click="handleClick(item, downloadType, $event), $dispatch('show:toast'), setTimeout(() => $dispatch('show:toast'), 2000)"
           >
             <img
@@ -269,7 +269,7 @@
               loading="lazy"
             />
             <p
-              class="text-xs leading-none text-center mt-8"
+              class="text-xs leading-none text-center mt-4 md:mt-8"
               x-text="item.icon_name"
             ></p>
             <span class="hidden" x-text="item.icon_keywords"></span>
