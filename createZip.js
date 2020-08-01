@@ -21,7 +21,7 @@ function zipDirectory(sourcePath, zipPath) {
 }
 
 var sourcePath = __dirname + "/src/images/icons/";
-var zipPath = __dirname + "/src/images/icons.zip";
+var zipPath = __dirname + "/src/images/System UIcons.zip";
 
 console.log(`Zipping ${sourcePath} to ${zipPath} (overwrites existing)`);
 
