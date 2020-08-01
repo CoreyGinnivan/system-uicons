@@ -230,7 +230,7 @@
       </div>
 
       <div
-        class="p-2 lg:p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-8 gap-4"
+        class="p-2 lg:p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-8 gap-2 md:gap-4"
       >
         <template x-for="(item, index) in filteredIcons" :key="index">
           <a
@@ -242,7 +242,7 @@
             item.icon_path +
             `.svg`"
             x-bind:download="downloadType === 'download-svg' && item.icon_name"
-            class="flex flex-col relative items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out h-32 md:h-40"
+            class="flex flex-col relative items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out p-2 h-32 md:h-40"
             @click="handleClick(item, downloadType, $event, $dispatch)"
           >
             <div>
@@ -278,7 +278,7 @@
               loading="lazy"
             />
             <p
-              class="text-xs leading-none text-gray-600 text-center mt-4 md:mt-8"
+              class="text-xs leading-none text-gray-600 text-center mt-4 md:mt-8 tracking-tight"
               x-text="item.icon_name"
             ></p>
             <span class="hidden" x-text="item.icon_keywords"></span>
