@@ -28,7 +28,10 @@
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "concurrently": "^5.1.0"
+    "cheerio": "^1.0.0-rc.3",
+    "concurrently": "^5.1.0",
+    "prettier-eslint": "^9.0.0",
+    "uppercamelcase": "^3.0.0"
   },
   "peerDependencies": {
     "react": "^16.8.6"
