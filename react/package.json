@@ -5,7 +5,7 @@
     "email": "corey@ginnivan.net",
     "url": "https://corey.ginnivan.net"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React components for system-uicons",
   "main": "src/index.js",
   "module": "dist/index.js",
@@ -13,6 +13,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "compile": "node bin/build.js",
     "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
     "build": "concurrently \"npm:build:*\""
   },
