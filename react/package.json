@@ -5,7 +5,7 @@
     "email": "corey@ginnivan.net",
     "url": "https://corey.ginnivan.net"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React components for system-uicons",
   "main": "src/index.js",
   "module": "dist/index.js",
