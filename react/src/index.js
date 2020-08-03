@@ -1,1 +1,1 @@
-export { default as AlarmClock } from './icons/alarm_clock'
+export { default as AlarmClock } from './alarm_clock'
