@@ -1,0 +1,36 @@
+{
+  "name": "react-systemuicons",
+  "author": {
+    "name": "Corey Ginnivan",
+    "email": "corey@ginnivan.net",
+    "url": "https://corey.ginnivan.net"
+  },
+  "version": "0.0.2",
+  "description": "React components for system-uicons",
+  "main": "src/index.js",
+  "module": "dist/index.js",
+  "sideEffects": false,
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
+    "build": "concurrently \"npm:build:*\""
+  },
+  "files": [
+    "dist",
+    "es"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "concurrently": "^5.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  }
+}
