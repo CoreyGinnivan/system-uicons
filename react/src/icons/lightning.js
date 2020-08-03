@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const Lightning = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -19,10 +20,10 @@ const Lightning = forwardRef(
         <path
           d="m6.5 7.5h4l-6 9v-6.997l-4-.003 6-9z"
           fill="none"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(5 2)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>
       </svg>
     )

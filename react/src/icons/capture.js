@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const Capture = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const Capture = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(2 2)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path
             d="m16.5.48528137v3.00587879c0 1.10227101-.8918463 1.99674656-1.9941126 1.99999133l-3.0058874.00884851"

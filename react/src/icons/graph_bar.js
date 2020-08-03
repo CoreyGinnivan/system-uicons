@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const GraphBar = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const GraphBar = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(3 3)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path d="m.5.5v12c0 1.1045695.8954305 2 2 2h11.5"></path>
           <path d="m3.5 8.5v3"></path>

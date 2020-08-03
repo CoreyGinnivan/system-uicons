@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const UserMaleCircle = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const UserMaleCircle = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(2 2)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <circle cx="8.5" cy="8.5" r="8"></circle>
           <path d="m14.5 13.5c-.6615287-2.2735217-3.1995581-3.0251263-6-3.0251263-2.72749327 0-5.27073171.8688092-6 3.0251263m6-11c1.6568542 0 3 1.34314575 3 3v1c0 1.65685425-1.3431458 3-3 3-1.65685425 0-3-1.34314575-3-3v-1c0-1.65685425 1.34314575-3 3-3z"></path>

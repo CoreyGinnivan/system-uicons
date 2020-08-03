@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const Disc = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,10 +19,10 @@ const Disc = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <circle cx="10.5" cy="10.5" r="8"></circle>
           <circle cx="10.5" cy="10.5" r="2.5"></circle>

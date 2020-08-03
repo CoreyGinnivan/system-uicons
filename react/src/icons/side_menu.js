@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const SideMenu = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -16,15 +17,15 @@ const SideMenu = forwardRef(
         strokeLinejoin="round"
         {...rest}
       >
-        <g fill="none" fill-rule="evenodd" transform="translate(3 5)">
-          <g stroke="#2a2e3b" stroke-linecap="round" stroke-linejoin="round">
+        <g fill="none" transform="translate(3 5)" fillRule="evenodd">
+          <g stroke={color} strokeLinecap="round" strokeLinejoin="round">
             <path d="m4.5 1.5h8"></path>
             <path d="m4.5 5.498h5"></path>
             <path d="m4.5 9.5h8"></path>
           </g>
           <path
             d="m1.49884033 2.5c.5 0 1-.5 1-1s-.5-1-1-1-.99884033.5-.99884033 1 .49884033 1 .99884033 1zm0 4c.5 0 1-.5 1-1s-.5-1-1-1-.99884033.5-.99884033 1 .49884033 1 .99884033 1zm0 4c.5 0 1-.5 1-1s-.5-1-1-1-.99884033.5-.99884033 1 .49884033 1 .99884033 1z"
-            fill="#2a2e3b"
+            fill="currentColor"
           ></path>
         </g>
       </svg>

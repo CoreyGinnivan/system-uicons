@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const ArrowLeft = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const ArrowLeft = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2A2E3B"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(3 6)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <polyline
             points="1.67 1.669 7.327 1.671 7.328 7.328"

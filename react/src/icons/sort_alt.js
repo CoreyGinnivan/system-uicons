@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const SortAlt = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,10 +19,10 @@ const SortAlt = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2A2E3B"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <g transform="rotate(-180 9 9.5) translate(0 8)">
             <polyline

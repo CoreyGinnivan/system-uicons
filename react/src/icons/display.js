@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const Display = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const Display = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(3 3)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path d="m2 .5h11c1.1045695 0 2 .8954305 2 2v6.04882185c0 1.1045695-.8954305 1.99999995-2 1.99999995-.0025044 0-.0050088-.0000047-.0075132-.0000141l-10.99999997-.0413227c-1.10162878-.0041384-1.99248683-.89834933-1.99248683-1.99998589v-6.00749911c0-1.1045695.8954305-2 2-2z"></path>
           <path d="m2.464 12.5h10.036"></path>

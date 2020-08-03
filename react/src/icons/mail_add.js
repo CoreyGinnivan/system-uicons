@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const MailAdd = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const MailAdd = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="matrix(0 -1 1 0 2 17)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path d="m7 14.5h-4.5c-1.1045695 0-2-.8954305-2-2v-10c0-1.1045695.8954305-2 2-2h7c1.1045695 0 2 .8954305 2 2v7.5"></path>
           <path d="m11.5 12.5v4"></path>

@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const GridSmall = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -16,7 +17,7 @@ const GridSmall = forwardRef(
         strokeLinejoin="round"
         {...rest}
       >
-        <g fill="#2A2E3B" fill-rule="evenodd" transform="translate(5 5)">
+        <g fill={color} transform="translate(5 5)" fillRule="evenodd">
           <rect width="3" height="3" x="4" y="4" rx="1"></rect>
           <rect width="3" height="3" x="4" rx="1"></rect>
           <rect width="3" height="3" x="8" y="4" rx="1"></rect>

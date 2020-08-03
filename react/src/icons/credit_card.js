@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const CreditCard = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -16,14 +17,14 @@ const CreditCard = forwardRef(
         strokeLinejoin="round"
         {...rest}
       >
-        <g fill="none" fill-rule="evenodd" transform="translate(2 5)">
+        <g fill="none" transform="translate(2 5)" fillRule="evenodd">
           <path
             d="m2.5.5h12c1.1045695 0 2 .8954305 2 2v7c0 1.1045695-.8954305 2-2 2h-12c-1.1045695 0-2-.8954305-2-2v-7c0-1.1045695.8954305-2 2-2z"
-            stroke="#2a2e3b"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></path>
-          <path d="m0 4h17v2h-17z" fill="#2a2e3b"></path>
+          <path d="m0 4h17v2h-17z" fill="currentColor"></path>
         </g>
       </svg>
     )

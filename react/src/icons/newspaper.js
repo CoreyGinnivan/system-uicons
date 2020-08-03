@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const Newspaper = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const Newspaper = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(1 4)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path d="m3.5 3.165h9"></path>
           <path d="m4.48122025 6.20339509 1-.01878307c.55218735-.01037177 1.00823163.42885655 1.01860339.9810439.00011757.00625923.00017636.01251942.00017636.01877975v.98327989c0 .54496455-.4363518.98958934-.98122025.99982364l-1 .01878306c-.55218735.01037177-1.00823163-.42885654-1.01860339-.98104389-.00011757-.00625923-.00017636-.01251942-.00017636-.01877975v-.98327989c0-.54496455.4363518-.98958935.98122025-.99982364z"></path>

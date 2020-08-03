@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const MicrophoneMuted = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const MicrophoneMuted = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(5 2)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path d="m8.5 6 .00115967 1.5c-.21419271 2-1.21535238 3-3.00115967 3s-2.78464762-1-2.99884033-3l-.00115967-3.5c0-2 1.85706111-3.2309912 2.5-3.5"></path>
           <g transform="translate(6)">

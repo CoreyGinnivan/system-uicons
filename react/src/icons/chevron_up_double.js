@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const ChevronUpDouble = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const ChevronUpDouble = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2A2E3B"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(6 6)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <polyline
             points="7.328 5.672 7.328 11.328 1.672 11.328"

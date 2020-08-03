@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const VolumeDisabled = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const VolumeDisabled = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(3 3)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path d="m7.5 1.5 1-1v3m0 3.12658691v7.87341309l-5-4h-2c-.55228475 0-1-.4477153-1-1v-4c0-.55228475.44771525-1 1-1h2l1.5-1.5"></path>
           <path d="m2.5.5 12 12"></path>

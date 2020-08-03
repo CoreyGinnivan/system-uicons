@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const ZoomCancel = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const ZoomCancel = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2A2E3B"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(3 3)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <circle cx="5.5" cy="5.5" r="5"></circle>
           <path

@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const LinkBroken = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const LinkBroken = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(2 2)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path
             d="m5.17157288 6.87867966v-1.41421357c0-1.56209716 1.26632995-2.82842712 2.82842712-2.82842712s2.8284271 1.26632996 2.8284271 2.82842712v1.41421357m0 2.82842712v2.82842712c0 1.5620972-1.26632993 2.8284271-2.8284271 2.8284271s-2.82842712-1.2663299-2.82842712-2.8284271v-2.82842712"

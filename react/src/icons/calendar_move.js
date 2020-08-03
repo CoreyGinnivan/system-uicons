@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const CalendarMove = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const CalendarMove = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(1 2)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path d="m1.5 8.46153846v-6.02882304c0-1.1045695.8954305-2 2-2 .00320511 0 .00641021.00000771.00961527.00002312l12.00000003.0576923c1.1008036.00529233 1.9903847.89916054 1.9903847 1.99997689v11.99995377c0 1.1045695-.8954305 2-2 2-.0032051 0-.0064102-.0000077-.0096153-.0000231l-11.99999997-.0576923c-1.10080364-.0052923-1.99038473-.8991606-1.99038473-1.9999769v-1.9326692"></path>
           <path d="m1.5 4.5h16"></path>

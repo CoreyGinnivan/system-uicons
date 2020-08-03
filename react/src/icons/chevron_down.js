@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const ChevronDown = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -19,10 +20,10 @@ const ChevronDown = forwardRef(
         <path
           d="m8.5.5-4 4-4-4"
           fill="none"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(6 8)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>
       </svg>
     )

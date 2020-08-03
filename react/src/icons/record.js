@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const Record = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -16,16 +17,16 @@ const Record = forwardRef(
         strokeLinejoin="round"
         {...rest}
       >
-        <g fill="none" fill-rule="evenodd">
+        <g fill="none" fillRule="evenodd">
           <circle
             cx="10.5"
             cy="10.5"
             r="5"
-            stroke="#2a2e3b"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></circle>
-          <circle cx="10.5" cy="10.5" fill="#2a2e3b" r="3"></circle>
+          <circle cx="10.5" cy="10.5" fill="currentColor" r="3"></circle>
         </g>
       </svg>
     )

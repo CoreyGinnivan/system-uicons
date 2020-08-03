@@ -4,6 +4,7 @@ const path = require('path')
 const fs = require('fs')
 const format = require('prettier-eslint')
 const upperCamelCase = require('uppercamelcase')
+const camelCase = require('camelcase')
 const cheerio = require('cheerio')
 
 const rootDir = path.join(__dirname, '..')
@@ -51,7 +52,26 @@ const attrsToString = (attrs) => {
 
 const getIconContents = (path) => {
   const icon = fs.readFileSync(path, 'utf8')
-  return cheerio.load(icon)('svg').html()
+  const $ = cheerio.load(icon)
+  const svg = $('svg')
+
+  svg.find('*').map((i, el) => {
+    Object.entries(el.attribs).map(([attr, value]) => {
+      if (attr.includes('-')) {
+        // camel case attributes
+        $(el).attr(attr, null) // remove old attribute
+        $(el).attr(camelCase(attr), value) // add new one
+      }
+      if (attr === 'fill' || attr === 'stroke') {
+        // set non-none fill/stroke to current color
+        if (value !== 'none') {
+          $(el).attr(attr, 'currentColor')
+        }
+      }
+    })
+  })
+
+  return svg.html().replace('"currentColor"', '{color}')
 }
 
 icons.forEach((i) => {
@@ -78,6 +98,7 @@ icons.forEach((i) => {
   const element = `
     import React, {forwardRef} from 'react';
     import PropTypes from 'prop-types';
+
     const ${ComponentName} = forwardRef(({ color = 'currentColor', size = 21, ...rest }, ref) => {
       return (
         <svg ref={ref} ${attrsToString(defaultAttrs)}>

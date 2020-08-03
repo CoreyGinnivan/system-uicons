@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const IphonePortrait = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -16,14 +17,14 @@ const IphonePortrait = forwardRef(
         strokeLinejoin="round"
         {...rest}
       >
-        <g fill="none" fill-rule="evenodd" transform="translate(5 3)">
+        <g fill="none" transform="translate(5 3)" fillRule="evenodd">
           <path
             d="m2.5.5h6c1.1045695 0 2 .8954305 2 2v10c0 1.1045695-.8954305 2-2 2h-6c-1.1045695 0-2-.8954305-2-2v-10c0-1.1045695.8954305-2 2-2z"
-            stroke="#2a2e3b"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></path>
-          <circle cx="5.5" cy="11.5" fill="#2a2e3b" r="1"></circle>
+          <circle cx="5.5" cy="11.5" fill="currentColor" r="1"></circle>
         </g>
       </svg>
     )

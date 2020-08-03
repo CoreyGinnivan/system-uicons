@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const Check = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -19,10 +20,10 @@ const Check = forwardRef(
         <path
           d="m.5 5.5 3 3 8.028-8"
           fill="none"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(5 6)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>
       </svg>
     )

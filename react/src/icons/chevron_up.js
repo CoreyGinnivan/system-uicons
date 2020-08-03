@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const ChevronUp = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const ChevronUp = forwardRef(
       >
         <polyline
           fill="none"
-          stroke="#2A2E3B"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           points="7.328 1.672 7.328 7.328 1.672 7.328"
           transform="rotate(-135 9.157 7.258)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></polyline>
       </svg>
     )

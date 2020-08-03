@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const InfoCircle = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -16,22 +17,22 @@ const InfoCircle = forwardRef(
         strokeLinejoin="round"
         {...rest}
       >
-        <g fill="none" fill-rule="evenodd">
+        <g fill="none" fillRule="evenodd">
           <circle
             cx="10.5"
             cy="10.5"
             r="8"
-            stroke="#2a2e3b"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></circle>
           <path
             d="m10.5 14.5v-4"
-            stroke="#2a2e3b"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></path>
-          <circle cx="10.5" cy="7.5" fill="#2a2e3b" r="1"></circle>
+          <circle cx="10.5" cy="7.5" fill="currentColor" r="1"></circle>
         </g>
       </svg>
     )

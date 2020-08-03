@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const FaceHappy = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -16,22 +17,22 @@ const FaceHappy = forwardRef(
         strokeLinejoin="round"
         {...rest}
       >
-        <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+        <g fill="none" transform="translate(2 2)" fillRule="evenodd">
           <circle
             cx="8.5"
             cy="8.5"
             r="8"
-            stroke="#2a2e3b"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></circle>
-          <circle cx="6" cy="6" fill="#2a2e3b" r="1"></circle>
-          <circle cx="11" cy="6" fill="#2a2e3b" r="1"></circle>
+          <circle cx="6" cy="6" fill="currentColor" r="1"></circle>
+          <circle cx="11" cy="6" fill="currentColor" r="1"></circle>
           <path
             d="m5 10c.93619792 1 2.10286458 1.5 3.5 1.5s2.5638021-.5 3.5-1.5"
-            stroke="#2a2e3b"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></path>
         </g>
       </svg>

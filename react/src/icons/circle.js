@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const Circle = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -21,9 +22,9 @@ const Circle = forwardRef(
           cy="10.5"
           fill="none"
           r="8"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></circle>
       </svg>
     )

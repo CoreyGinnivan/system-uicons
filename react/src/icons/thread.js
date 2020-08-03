@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+
 const Thread = forwardRef(
   ({ color = 'currentColor', size = 21, ...rest }, ref) => {
     return (
@@ -18,11 +19,11 @@ const Thread = forwardRef(
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke="#2a2e3b"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke={color}
           transform="translate(1 1)"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path
             d="m15.5 4.5c1.6568542 0 3 1.34314575 3 3v5c0 1.6568542-1.3431458 3-3 3l-2.468-.001-1.7152977 2.4298518c-.1639804.2320786-.4176379.3818336-.6960544.4156462l-.1206479.0072945c-.55228475 0-1-.4477152-1-1l-.001-1.8527925-.999.001c-1.65685425 0-3-1.3431458-3-3v-5c0-1.65685425 1.34314575-3 3-3z"
