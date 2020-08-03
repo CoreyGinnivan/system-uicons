@@ -26,11 +26,11 @@ const Printer = forwardRef(
           ></path>
           <path
             d="m1.5 4.5h5.0013251v8h-5.0013251c-.55228475 0-1-.4477153-1-1v-6c0-.55228475.44771525-1 1-1zm11.5 0h2.5c.5522847 0 1 .44771525 1 1v6c0 .5522847-.4477153 1-1 1h-2.5"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="9" cy="14" fill="currentColor" r="1"></circle>
+          <circle cx="9" cy="14" fill={color} r="1"></circle>
         </g>
       </svg>
     )

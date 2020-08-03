@@ -26,11 +26,11 @@ const WarningTriangle = forwardRef(
           ></path>
           <path
             d="m9.5 10.5v-5"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="9.5" cy="13.5" fill="currentColor" r="1"></circle>
+          <circle cx="9.5" cy="13.5" fill={color} r="1"></circle>
         </g>
       </svg>
     )

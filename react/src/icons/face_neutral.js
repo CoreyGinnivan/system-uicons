@@ -26,11 +26,11 @@ const FaceNeutral = forwardRef(
             strokeLinecap="round"
             strokeLinejoin="round"
           ></circle>
-          <circle cx="6" cy="6" fill="currentColor" r="1"></circle>
-          <circle cx="11" cy="6" fill="currentColor" r="1"></circle>
+          <circle cx="6" cy="6" fill={color} r="1"></circle>
+          <circle cx="11" cy="6" fill={color} r="1"></circle>
           <path
             d="m5.5 10.5h6"
-            stroke="currentColor"
+            stroke={color}
             transform="matrix(1 0 0 -1 0 21)"
             strokeLinecap="round"
             strokeLinejoin="round"

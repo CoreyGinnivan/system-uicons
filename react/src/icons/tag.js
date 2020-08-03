@@ -25,7 +25,7 @@ const Tag = forwardRef(
             strokeLinejoin="round"
           ></path>
           <rect
-            fill="currentColor"
+            fill={color}
             height="2"
             rx="1"
             width="2"

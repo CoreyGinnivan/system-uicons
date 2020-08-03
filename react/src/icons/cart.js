@@ -24,9 +24,9 @@ const Cart = forwardRef(
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <path d="m12 10h2v2h-2z" fill="currentColor"></path>
-          <path d="m5 10h2v2h-2z" fill="currentColor"></path>
-          <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+          <path d="m12 10h2v2h-2z" fill={color}></path>
+          <path d="m5 10h2v2h-2z" fill={color}></path>
+          <g stroke={color} strokeLinecap="round" strokeLinejoin="round">
             <path d="m.5.5h13"></path>
             <path d="m3 3.5h10.5"></path>
           </g>

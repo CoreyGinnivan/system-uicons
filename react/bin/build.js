@@ -71,7 +71,7 @@ const getIconContents = (path) => {
     })
   })
 
-  return svg.html().replace('"currentColor"', '{color}')
+  return svg.html().replace(/"currentColor"/g, '{color}')
 }
 
 icons.forEach((i) => {

@@ -28,11 +28,11 @@ const QuestionCircle = forwardRef(
           ></circle>
           <path
             d="m8.5 9.5v-1l1.41421356-1.41421356c.37507274-.37507276.58578644-.88378059.58578644-1.41421356v-.17157288c0-.61286606-.3462631-1.17313156-.89442719-1.4472136l-.21114562-.1055728c-.56305498-.2815275-1.2257994-.2815275-1.78885438 0l-.10557281.0527864c-.61286606.30643303-1 .9328289-1 1.61803399v.88196601"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="8.5" cy="12.5" fill="currentColor" r="1"></circle>
+          <circle cx="8.5" cy="12.5" fill={color} r="1"></circle>
         </g>
       </svg>
     )

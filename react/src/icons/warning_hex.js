@@ -30,11 +30,11 @@ const WarningHex = forwardRef(
             x2="11.5"
             y1="12.5"
             y2="7.5"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></line>
-          <circle cx="11.5" cy="15.5" r="1" fill="currentColor"></circle>
+          <circle cx="11.5" cy="15.5" r="1" fill={color}></circle>
         </g>
       </svg>
     )

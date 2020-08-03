@@ -24,14 +24,14 @@ const Server = forwardRef(
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="4" cy="4" fill="currentColor" r="1"></circle>
+          <circle cx="4" cy="4" fill={color} r="1"></circle>
           <path
             d="m9.50624332.5000411 2.99999998.00936502c1.1021268.00344048 1.9937567.89785814 1.9937567 1.99999026v12.99057222c0 1.1045695-.8954305 2-2 2-.0020811 0-.0041622-.0000032-.0062433-.0000097l-3.00000002-.009365c-1.10212675-.0034405-1.99375668-.8978582-1.99375668-1.9999903v-12.99057225c0-1.1045695.8954305-2 2-2 .00208111 0 .00416222.00000325.00624332.00000975z"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="11" cy="4" fill="currentColor" r="1"></circle>
+          <circle cx="11" cy="4" fill={color} r="1"></circle>
         </g>
       </svg>
     )

@@ -26,11 +26,11 @@ const CalendarMonth = forwardRef(
           ></path>
           <path
             d="m.5 4.5h16"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <g fill="currentColor">
+          <g fill={color}>
             <g>
               <circle cx="8.5" cy="8.5" r="1"></circle>
               <circle cx="4.5" cy="8.5" r="1"></circle>

@@ -24,7 +24,7 @@ const LockOpen = forwardRef(
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="6.5" cy="13.5" fill="currentColor" r="1.5"></circle>
+          <circle cx="6.5" cy="13.5" fill={color} r="1.5"></circle>
         </g>
       </svg>
     )

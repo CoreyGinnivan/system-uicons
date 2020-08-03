@@ -26,7 +26,7 @@ const Record = forwardRef(
             strokeLinecap="round"
             strokeLinejoin="round"
           ></circle>
-          <circle cx="10.5" cy="10.5" fill="currentColor" r="3"></circle>
+          <circle cx="10.5" cy="10.5" fill={color} r="3"></circle>
         </g>
       </svg>
     )

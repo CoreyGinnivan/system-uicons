@@ -24,7 +24,7 @@ const IphonePortrait = forwardRef(
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="5.5" cy="11.5" fill="currentColor" r="1"></circle>
+          <circle cx="5.5" cy="11.5" fill={color} r="1"></circle>
         </g>
       </svg>
     )

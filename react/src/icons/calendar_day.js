@@ -26,11 +26,11 @@ const CalendarDay = forwardRef(
           ></path>
           <path
             d="m.5 4.5h16.027"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="4.5" cy="8.5" fill="currentColor" r="1"></circle>
+          <circle cx="4.5" cy="8.5" fill={color} r="1"></circle>
         </g>
       </svg>
     )

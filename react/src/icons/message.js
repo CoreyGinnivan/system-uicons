@@ -26,17 +26,17 @@ const Message = forwardRef(
           ></path>
           <path
             d="m13.5 5.5h-6"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
           <path
             d="m4.49884033 6.5c.5 0 1-.5 1-1s-.5-1-1-1-.99884033.5-.99884033 1 .49884033 1 .99884033 1zm0 4c.5 0 1-.5 1-1s-.5-1-1-1-.99884033.5-.99884033 1 .49884033 1 .99884033 1z"
-            fill="currentColor"
+            fill={color}
           ></path>
           <path
             d="m13.5 9.5h-6"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>

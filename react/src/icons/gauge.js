@@ -26,11 +26,11 @@ const Gauge = forwardRef(
           ></path>
           <path
             d="m8.5 8.5-4-4"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="8.5" cy="8.5" fill="currentColor" r="1.5"></circle>
+          <circle cx="8.5" cy="8.5" fill={color} r="1.5"></circle>
         </g>
       </svg>
     )

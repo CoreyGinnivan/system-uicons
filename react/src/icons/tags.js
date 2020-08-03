@@ -26,12 +26,12 @@ const Tags = forwardRef(
           ></path>
           <path
             d="m6.03984489 13.9540585-.90290911.6019394c-.91905738.6127049-2.16079606.3643571-2.77350098-.5547002-.08486292-.1272944-.15483981-.2639057-.20855777-.4071535l-1.53002215-4.08005911c-.3389108-.90376213.01599891-1.92063198.84366684-2.41723274l8.57132318-5.1427939"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
           <rect
-            fill="currentColor"
+            fill={color}
             height="2"
             rx="1"
             width="2"

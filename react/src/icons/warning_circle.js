@@ -28,11 +28,11 @@ const WarningCircle = forwardRef(
           ></circle>
           <path
             d="m10.5 11.5v-5"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="10.5" cy="14.5" fill="currentColor" r="1"></circle>
+          <circle cx="10.5" cy="14.5" fill={color} r="1"></circle>
         </g>
       </svg>
     )

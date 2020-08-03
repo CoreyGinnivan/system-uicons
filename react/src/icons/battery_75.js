@@ -26,11 +26,11 @@ const Battery75 = forwardRef(
           ></path>
           <path
             d="m3 2h7c.5522847 0 1 .44771525 1 1v2.04629283c0 .55228475-.4477153 1-1 1h-7c-.55228475 0-1-.44771525-1-1v-2.04629283c0-.55228475.44771525-1 1-1z"
-            fill="currentColor"
+            fill={color}
           ></path>
           <path
             d="m16.5 2.5v3"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>

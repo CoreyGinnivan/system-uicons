@@ -26,11 +26,11 @@ const FaceDelighted = forwardRef(
             strokeLinecap="round"
             strokeLinejoin="round"
           ></circle>
-          <circle cx="6" cy="6" fill="currentColor" r="1"></circle>
-          <circle cx="11" cy="6" fill="currentColor" r="1"></circle>
+          <circle cx="6" cy="6" fill={color} r="1"></circle>
+          <circle cx="11" cy="6" fill={color} r="1"></circle>
           <path
             d="m5 10c.33294678 2.3333333 1.49961344 3.5 3.5 3.5 2.0003866 0 3.1670532-1.1666667 3.5-3.5z"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>

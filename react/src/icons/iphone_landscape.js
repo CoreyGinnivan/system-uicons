@@ -24,7 +24,7 @@ const IphoneLandscape = forwardRef(
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="11.5" cy="5.5" fill="currentColor" r="1"></circle>
+          <circle cx="11.5" cy="5.5" fill={color} r="1"></circle>
         </g>
       </svg>
     )

@@ -24,7 +24,7 @@ const CreditCard = forwardRef(
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <path d="m0 4h17v2h-17z" fill="currentColor"></path>
+          <path d="m0 4h17v2h-17z" fill={color}></path>
         </g>
       </svg>
     )

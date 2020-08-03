@@ -28,11 +28,11 @@ const InfoCircle = forwardRef(
           ></circle>
           <path
             d="m10.5 14.5v-4"
-            stroke="currentColor"
+            stroke={color}
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-          <circle cx="10.5" cy="7.5" fill="currentColor" r="1"></circle>
+          <circle cx="10.5" cy="7.5" fill={color} r="1"></circle>
         </g>
       </svg>
     )
