@@ -1,35 +1,8 @@
-# Tailwind CSS Webpack Starter Project
+# What is System UIcons?
 
-This is an example of a super simple Webpack setup for using [Tailwind CSS](https://tailwindcss.com).
+System UIcons is a collection of open source icons designed for products and systems in mind. Each icon is on a 21x21 grid.
 
-To get started, clone the project and install the dependencies:
+Use the icons how you want, for free, and without any attribution.
 
-```
-# Using npm
-npm install
+[https://systemuicons.com/](https://systemuicons.com/)
 
-# Using Yarn
-yarn
-```
-
-After that, start up Webpack Development Server:
-
-```
-npm run dev
-```
-
-Webpack Development Server will watch `/src/styles.css` and `/tailwind.js` and rebuild your stylesheet on every change.
-
-You can play around with `/index.html` to see the effects of your changes.
-
-To build a production bundle run:
-
-```
-npm run prod
-```
-
-After that you will have a ready to deploy bundle at `/dist`
-
-## Contributing
-
-Have a lot of experience with Webpack and suggestions on how we could improve this starter template? We'd love a PR!
