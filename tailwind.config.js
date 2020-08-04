@@ -6,6 +6,9 @@ module.exports = {
         "Roboto Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace",
       ],
     },
+    scale: {
+      "200": "2",
+    },
   },
   variants: {
     scale: ["responsive", "hover", "focus", "group-hover"],
