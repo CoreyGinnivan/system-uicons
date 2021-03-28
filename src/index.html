@@ -51,11 +51,11 @@
     <!-- Primary Meta Tags -->
   </head>
   <body
-    class="bg-white font-mono leading-normal tracking-normal flex flex-col min-h-screen"
+    class="flex flex-col min-h-screen font-mono leading-normal tracking-normal bg-white"
     x-data="loadIcons()"
   >
     <main class="flex-grow">
-      <nav class="flex p-4 md:p-6 lg:p-8 justify-between text-sm md:text-base">
+      <nav class="flex justify-between p-4 text-sm md:p-6 lg:p-8 md:text-base">
         <a class="font-extrabold" href="/">System UIcons</a>
         <div class="space-x-3 md:space-x-8">
           <!-- <a class="hover:underline" href="/about">Behind the design</a>
@@ -77,7 +77,7 @@
         </div>
       </nav>
       <div class="p-4 md:p-6 lg:p-8">
-        <p class="text-xl lg:text-3xl xl:text-5xl text-black leading-tight">
+        <p class="text-xl leading-tight text-black lg:text-3xl xl:text-5xl">
           A growing collection of simple and consistent icons specifically
           designed for systems and products.
           <strong class="italic underline"
@@ -86,12 +86,12 @@
         </p>
       </div>
       <div
-        class="bg-white text-gray-400 px-4 md:px-6 lg:px-8 py-4 flex flex-row items-center mt-4 md:mt-6 lg:mt-8"
+        class="flex flex-row items-center px-4 py-4 mt-4 text-gray-400 bg-white md:px-6 lg:px-8 md:mt-6 lg:mt-8"
       >
         <svg
           viewBox="0 0 21 21"
           xmlns="http://www.w3.org/2000/svg"
-          class="w-6 md:w-7 lg:w-12 h-6 md:h-7 lg:h-12 mr-4"
+          class="w-6 h-6 mr-4 md:w-7 lg:w-12 md:h-7 lg:h-12"
         >
           <g
             fill="none"
@@ -118,17 +118,17 @@
           autocomplete="off"
           autocorrect="off"
           spellcheck="false"
-          class="flex flex-1 w-full focus:outline-none placeholder-gray-400 appearance-none text-black focus:text-black tracking-tighter text-xl lg:text-3xl xl:text-5xl"
+          class="flex flex-1 w-full text-xl tracking-tighter text-black placeholder-gray-400 appearance-none focus:outline-none focus:text-black lg:text-3xl xl:text-5xl"
         />
       </div>
       <div
-        class="flex flex-col space-y-2 md:space-y-0 md:flex-row border-t border-gray-300 bg-white py-4 px-4 md:px-6 lg:px-8 sticky top-0 z-10"
+        class="sticky top-0 z-10 flex flex-col px-4 py-4 space-y-2 bg-white border-t border-gray-300 md:space-y-0 md:flex-row md:px-6 lg:px-8"
       >
         <div
-          class="flex flex-col md:flex-row bg-gray-200 p-1 rounded space-x-0 md:space-x-1 space-y-1 md:space-y-0"
+          class="flex flex-col p-1 space-x-0 space-y-1 bg-gray-200 rounded md:flex-row md:space-x-1 md:space-y-0"
         >
           <label
-            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-100 hover:text-black transition duration-200 py-2 w-full md:w-auto md:py-0 flex-no-wrap"
+            class="inline-flex flex-no-wrap items-center w-full h-full px-2 py-2 text-sm transition duration-200 rounded cursor-pointer lg:text-base hover:bg-gray-100 hover:text-black md:w-auto md:py-0"
             :class="downloadType === 'copy-svg' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -169,7 +169,7 @@
             <span class="whitespace-no-wrap">Copy SVG Code</span>
           </label>
           <label
-            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-100 hover:text-black transition duration-200 py-2 w-full md:w-auto md:py-0 flex-no-wrap"
+            class="inline-flex flex-no-wrap items-center w-full h-full px-2 py-2 text-sm transition duration-200 rounded cursor-pointer lg:text-base hover:bg-gray-100 hover:text-black md:w-auto md:py-0"
             :class="downloadType === 'copy-cdn' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -207,7 +207,7 @@
             <span class="whitespace-no-wrap">Copy CDN Link</span>
           </label>
           <label
-            class="inline-flex h-full items-center cursor-pointer rounded px-2 text-sm lg:text-base hover:bg-gray-100 hover:text-black transition duration-200 py-2 w-full md:w-auto md:py-0 flex-no-wrap"
+            class="inline-flex flex-no-wrap items-center w-full h-full px-2 py-2 text-sm transition duration-200 rounded cursor-pointer lg:text-base hover:bg-gray-100 hover:text-black md:w-auto md:py-0"
             :class="downloadType === 'download-svg' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -246,7 +246,7 @@
         </div>
         <a
           href="images/System UIcons.zip"
-          class="flex flex-row items-center ml-auto p-3 rounded bg-black text-white text-sm lg:text-base hover:bg-gray-900 w-full md:w-auto"
+          class="flex flex-row items-center w-full p-3 ml-auto text-sm text-white bg-black rounded lg:text-base hover:bg-gray-900 md:w-auto"
           download
         >
           <span class="mr-2">
@@ -278,7 +278,7 @@
       </div>
 
       <div
-        class="p-4 md:p-6 lg:p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-8 gap-2 md:gap-4"
+        class="grid grid-cols-2 gap-2 p-4 md:p-6 lg:p-8 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-8 md:gap-4"
       >
         <template x-for="(item, index) in filteredIcons" :key="index">
           <a
@@ -290,7 +290,7 @@
             item.icon_path +
             `.svg`"
             x-bind:download="downloadType === 'download-svg' && item.icon_name"
-            class="flex flex-col relative items-center group justify-center text-gray-700 rounded shadow hover:shadow-xl bg-white cursor-pointer transition duration-150 ease-in-out p-2 h-32 md:h-40"
+            class="relative flex flex-col items-center justify-center h-32 p-2 text-gray-700 transition duration-150 ease-in-out bg-white rounded shadow cursor-pointer group hover:shadow-xl md:h-40"
             @click="handleClick(item, downloadType, $event, $dispatch)"
           >
             <div>
@@ -299,8 +299,8 @@
                 x-show="copied === item.icon_name"
                 x-on:show:toast.document="copied = $event.detail"
                 x-cloak
-                class="rounded bg-black py-1 px-2 absolute top-0 -mt-8 left-0 right-0 text-sm text-white text-center mx-auto z-50"
-                style="width: fit-content;"
+                class="absolute top-0 left-0 right-0 z-50 px-2 py-1 mx-auto -mt-8 text-sm text-center text-white bg-black rounded"
+                style="width: fit-content"
                 x-transition:enter="transition ease-out duration-200"
                 x-transition:enter-start="opacity-0 transform scale-90"
                 x-transition:enter-end="opacity-100 transform scale-100"
@@ -322,25 +322,23 @@
             <img
               :src="`images/icons/` + item.icon_path + `.svg`"
               :alt="item.icon_name"
-              class="transform transition duration-200 group-hover:scale-200"
+              class="transition duration-200 transform group-hover:scale-200"
               loading="lazy"
             />
             <p
-              class="text-xs leading-none text-gray-600 text-center mt-4 md:mt-8 tracking-tight"
+              class="mt-4 text-xs leading-none tracking-tight text-center text-gray-600 md:mt-8"
               x-text="item.icon_name"
             ></p>
             <span class="hidden" x-text="item.icon_keywords"></span>
           </a>
         </template>
         <div x-show="filteredIcons.length === 0" class="col-span-2">
-          <h3 class="text-xl text-gray-500">
-            No Matches Found
-          </h3>
+          <h3 class="text-xl text-gray-500">No Matches Found</h3>
         </div>
       </div>
     </main>
     <footer
-      class="flex flex-col space-y-4 md:space-y-0 md:flex-row py-8 mx-8 border-t border-gray-300 text-gray-700"
+      class="flex flex-col py-8 mx-8 space-y-4 text-gray-700 border-t border-gray-300 md:space-y-0 md:flex-row"
     >
       <span>
         Project by
@@ -354,1115 +352,9 @@
       </span>
       <span class="md:ml-auto">Use how you want, without attribution</span>
     </footer>
-    <script>
-      var sourceData = [
-        {
-          icon_name: "Create",
-          icon_path: "create",
-          icon_keywords: "create new make note",
-        },
-        {
-          icon_name: "Write",
-          icon_path: "write",
-          icon_keywords:
-            "write, writing, new, create, note, taking, paper pencil",
-        },
-        {
-          icon_name: "Pen",
-          icon_path: "pen",
-          icon_keywords:
-            "write, writing, new, create, note, taking, paper pencil",
-        },
-        {
-          icon_name: "Tag",
-          icon_path: "tag",
-          icon_keywords: "tag",
-        },
-        {
-          icon_name: "Tags",
-          icon_path: "tags",
-          icon_keywords: "tags",
-        },
-        {
-          icon_name: "Speech Bubble",
-          icon_path: "speech_bubble",
-          icon_keywords: "speech bubble, chat",
-        },
-        {
-          icon_name: "Speech Bubble (Writing)",
-          icon_path: "speech_typing",
-          icon_keywords:
-            "speech bubble, chat, speak, speech typing, writing, waiting",
-        },
-        {
-          icon_name: "Speech Bubble (Add)",
-          icon_path: "chat_add",
-          icon_keywords: "chat bubble speech speak message new add",
-        },
-        {
-          icon_name: "Paperclip",
-          icon_path: "paperclip",
-          icon_keywords: "paperclip, attachment, link",
-        },
-        {
-          icon_name: "Phone (Portrait)",
-          icon_path: "phone_portrait",
-          icon_keywords: "iphone android phone portrait mobile talk",
-        },
-        {
-          icon_name: "Phone (Landscape)",
-          icon_path: "phone_landscape",
-          icon_keywords: "iphone android phone landscape mobile talk",
-        },
-        {
-          icon_name: "Phone (Alt - Portrait)",
-          icon_path: "iphone_portrait",
-          icon_keywords: "iphone android phone portrait mobile talk",
-        },
-        {
-          icon_name: "Phone (Alt - Landscape)",
-          icon_path: "iphone_landscape",
-          icon_keywords: "iphone android phone landscape mobile talk",
-        },
-        {
-          icon_name: "Calendar",
-          icon_path: "calendar",
-          icon_keywords: "calendar",
-        },
-        {
-          icon_name: "Calendar (Day)",
-          icon_path: "calendar_day",
-          icon_keywords: "calendar calender day",
-        },
-        {
-          icon_name: "Calendar (Days)",
-          icon_path: "calendar_days",
-          icon_keywords: "calendar calender days",
-        },
-        {
-          icon_name: "Calendar (Date)",
-          icon_path: "calendar_date",
-          icon_keywords: "calendar calender date",
-        },
-        {
-          icon_name: "Calendar (End)",
-          icon_path: "calendar_last_day",
-          icon_keywords: "calendar calender day month end last final year",
-        },
-        {
-          icon_name: "Calendar (Week)",
-          icon_path: "calendar_week",
-          icon_keywords: "calendar calender week days",
-        },
-        {
-          icon_name: "Calendar (Month)",
-          icon_path: "calendar_month",
-          icon_keywords: "calendar calender month week",
-        },
-        {
-          icon_name: "Calendar (Split)",
-          icon_path: "calendar_split",
-          icon_keywords: "calendar calender split",
-        },
-        {
-          icon_name: "Calendar (Add)",
-          icon_path: "calendar_add",
-          icon_keywords: "calendar calender add",
-        },
-        {
-          icon_name: "Calendar (Remove)",
-          icon_path: "calendar_remove",
-          icon_keywords: "calendar remove delete cancel",
-        },
-        {
-          icon_name: "Calendar (Move)",
-          icon_path: "calendar_move",
-          icon_keywords: "calendar move",
-        },
-        {
-          icon_name: "Check (Circle)",
-          icon_path: "check_circle",
-          icon_keywords: "check circle tick approved correct yes",
-        },
-        {
-          icon_name: "Cross (Circle)",
-          icon_path: "cross_circle",
-          icon_keywords: "circle cross delete remove wrong incorrect no close",
-        },
-        {
-          icon_name: "Check",
-          icon_path: "check",
-          icon_keywords: "check tick approved correct yes",
-        },
-        {
-          icon_name: "Cross",
-          icon_path: "cross",
-          icon_keywords: "cross delete remove wrong incorrect no close",
-        },
-        {
-          icon_name: "Exit (Left)",
-          icon_path: "exit_left",
-          icon_keywords: "exit left",
-        },
-        {
-          icon_name: "Exit (Right)",
-          icon_path: "exit_right",
-          icon_keywords: "exit right",
-        },
-        {
-          icon_name: "Folder",
-          icon_path: "folder_closed",
-          icon_keywords: "folder closed",
-        },
-        {
-          icon_name: "Folder (Open)",
-          icon_path: "folder_open",
-          icon_keywords: "folder open",
-        },
-        {
-          icon_name: "Lightning",
-          icon_path: "lightning",
-          icon_keywords: "lightning charge charging bolt electricity",
-        },
-        {
-          icon_name: "Lightning (Alt)",
-          icon_path: "lightning_alt",
-          icon_keywords: "lightning charge charging bolt electricity",
-        },
-        {
-          icon_name: "Message",
-          icon_path: "message",
-          icon_keywords: "message comment text writing",
-        },
-        {
-          icon_name: "Message (Writing)",
-          icon_path: "message_writing",
-          icon_keywords: "message comment text writing",
-        },
-        {
-          icon_name: "Search",
-          icon_path: "search",
-          icon_keywords: "search",
-        },
-        {
-          icon_name: "Sliders",
-          icon_path: "sliders",
-          icon_keywords: "sliders",
-        },
-        {
-          icon_name: "Thumbs Up",
-          icon_path: "thumbs_up",
-          icon_keywords: "thumbs up",
-        },
-        {
-          icon_name: "Thumbs Down",
-          icon_path: "thumbs_down",
-          icon_keywords: "thumbs down",
-        },
-        {
-          icon_name: "Version",
-          icon_path: "version",
-          icon_keywords: "versions stacks stacked levels layer layers",
-        },
-        {
-          icon_name: "Versions",
-          icon_path: "versions",
-          icon_keywords: "versions stacks stacked levels layer layers",
-        },
-        {
-          icon_name: "Coffee",
-          icon_path: "coffee",
-          icon_keywords: "coffee",
-        },
-        {
-          icon_name: "Compass",
-          icon_path: "compass",
-          icon_keywords: "compass safari",
-        },
-        {
-          icon_name: "Document",
-          icon_path: "document",
-          icon_keywords: "document file",
-        },
-        {
-          icon_name: "Download",
-          icon_path: "download",
-          icon_keywords: "download",
-        },
-        {
-          icon_name: "Download (Alt)",
-          icon_path: "download_alt",
-          icon_keywords: "download_alt",
-        },
-        {
-          icon_name: "Upload",
-          icon_path: "upload",
-          icon_keywords: "upload",
-        },
-        {
-          icon_name: "Upload (Alt)",
-          icon_path: "upload_alt",
-          icon_keywords: "upload_alt",
-        },
-        {
-          icon_name: "Location",
-          icon_path: "location",
-          icon_keywords: "location",
-        },
-        {
-          icon_name: "Lock (Closed)",
-          icon_path: "lock",
-          icon_keywords: "lock",
-        },
-        {
-          icon_name: "Lock (Open)",
-          icon_path: "lock_open",
-          icon_keywords: "lock",
-        },
-        {
-          icon_name: "Mail",
-          icon_path: "mail",
-          icon_keywords: "mail",
-        },
-        {
-          icon_name: "Mail (Open)",
-          icon_path: "mail_open",
-          icon_keywords: "mail",
-        },
-        {
-          icon_name: "Mail (New)",
-          icon_path: "mail_new",
-          icon_keywords: "mail_ ew",
-        },
-        {
-          icon_name: "Mail (Delete)",
-          icon_path: "mail_delete",
-          icon_keywords: "mail",
-        },
-        {
-          icon_name: "Mail (Remove)",
-          icon_path: "mail_remove",
-          icon_keywords: "mail",
-        },
-        {
-          icon_name: "Mail (Add)",
-          icon_path: "mail_add",
-          icon_keywords: "mail",
-        },
-        {
-          icon_name: "Mail (Minus)",
-          icon_path: "mail_minus",
-          icon_keywords: "mail",
-        },
-        {
-          icon_name: "Maximise",
-          icon_path: "maximise",
-          icon_keywords: "maximise",
-        },
-        {
-          icon_name: "Paper",
-          icon_path: "paper",
-          icon_keywords: "paper document file",
-        },
-        {
-          icon_name: "Paper Folded",
-          icon_path: "paper_folded",
-          icon_keywords: "paper folded document file",
-        },
-        {
-          icon_name: "Share",
-          icon_path: "share",
-          icon_keywords: "share",
-        },
-        {
-          icon_name: "Archive",
-          icon_path: "archive",
-          icon_keywords: "archive",
-        },
-        {
-          icon_name: "Unarchive",
-          icon_path: "unarchive",
-          icon_keywords: "unarchive",
-        },
-        {
-          icon_name: "Chevron Up",
-          icon_path: "chevron_up",
-          icon_keywords: "chevron up",
-        },
-        {
-          icon_name: "Chevron Down",
-          icon_path: "chevron_down",
-          icon_keywords: "chevron down",
-        },
-        {
-          icon_name: "Chevron Left",
-          icon_path: "chevron_left",
-          icon_keywords: "chevron left",
-        },
-        {
-          icon_name: "Chevron Right",
-          icon_path: "chevron_right",
-          icon_keywords: "chevron right",
-        },
-        {
-          icon_name: "Double Chevron Up",
-          icon_path: "chevron_up_double",
-          icon_keywords: "chevron up double",
-        },
-        {
-          icon_name: "Double Chevron Down",
-          icon_path: "chevron_down_double",
-          icon_keywords: "chevron down double",
-        },
-        {
-          icon_name: "Double Chevron Left",
-          icon_path: "chevron_left_double",
-          icon_keywords: "chevron left double",
-        },
-        {
-          icon_name: "Double Chevron Right",
-          icon_path: "chevron_right_double",
-          icon_keywords: "chevron right double",
-        },
-        {
-          icon_name: "Chevron Up (Circle)",
-          icon_path: "chevron_up_circle",
-          icon_keywords: "chevron up circle",
-        },
-        {
-          icon_name: "Chevron Down (Circle)",
-          icon_path: "chevron_down_circle",
-          icon_keywords: "chevron down circle",
-        },
-        {
-          icon_name: "Chevron Left (Circle)",
-          icon_path: "chevron_left_circle",
-          icon_keywords: "chevron left circle",
-        },
-        {
-          icon_name: "Chevron Right (Circle)",
-          icon_path: "chevron_right_circle",
-          icon_keywords: "chevron right circle",
-        },
-        {
-          icon_name: "Funnel",
-          icon_path: "funnel",
-          icon_keywords: "funnel",
-        },
-        {
-          icon_name: "Thread",
-          icon_path: "thread",
-          icon_keywords: "thread",
-        },
-        {
-          icon_name: "Star",
-          icon_path: "star",
-          icon_keywords: "star",
-        },
-        {
-          icon_name: "User (Female)",
-          icon_path: "user",
-          icon_keywords: "user female",
-        },
-        {
-          icon_name: "User (Male)",
-          icon_path: "user_male",
-          icon_keywords: "user male",
-        },
-        {
-          icon_name: "User (Female Circle)",
-          icon_path: "user_circle",
-          icon_keywords: "user female circle",
-        },
-        {
-          icon_name: "User (Male Circle)",
-          icon_path: "user_male_circle",
-          icon_keywords: "user male circle",
-        },
-        {
-          icon_name: "Users",
-          icon_path: "users",
-          icon_keywords: "users male circle",
-        },
-        {
-          icon_name: "Redo",
-          icon_path: "redo",
-          icon_keywords: "redo",
-        },
-        {
-          icon_name: "Undo",
-          icon_path: "undo",
-          icon_keywords: "undo",
-        },
-        {
-          icon_name: "Jump Forward",
-          icon_path: "jump_forward",
-          icon_keywords: "jump forward",
-        },
-        {
-          icon_name: "Jump Backward",
-          icon_path: "jump_backward",
-          icon_keywords: "jump backward reply",
-        },
-        {
-          icon_name: "Jump Up",
-          icon_path: "jump_up",
-          icon_keywords: "jump up",
-        },
-        {
-          icon_name: "Jump Down",
-          icon_path: "jump_down",
-          icon_keywords: "jump down",
-        },
-        {
-          icon_name: "Plus",
-          icon_path: "plus",
-          icon_keywords: "add plus",
-        },
-        {
-          icon_name: "Minus",
-          icon_path: "minus",
-          icon_keywords: "minus remove negative take circle",
-        },
-        {
-          icon_name: "Plus (Circle)",
-          icon_path: "plus_circle",
-          icon_keywords: "add plus circle",
-        },
-        {
-          icon_name: "Minus (Circle)",
-          icon_path: "minus_circle",
-          icon_keywords: "minus remove negative take circle",
-        },
-        {
-          icon_name: "Arrow Up",
-          icon_path: "arrow_up",
-          icon_keywords: "arrow up",
-        },
-        {
-          icon_name: "Arrow Down",
-          icon_path: "arrow_down",
-          icon_keywords: "arrow down",
-        },
-        {
-          icon_name: "Arrow Left",
-          icon_path: "arrow_left",
-          icon_keywords: "arrow left",
-        },
-        {
-          icon_name: "Arrow Right",
-          icon_path: "arrow_right",
-          icon_keywords: "arrow right",
-        },
-        {
-          icon_name: "Arrow Up (Circle)",
-          icon_path: "arrow_up_circle",
-          icon_keywords: "arrow up circle",
-        },
-        {
-          icon_name: "Arrow Down (Circle)",
-          icon_path: "arrow_down_circle",
-          icon_keywords: "arrow down circle",
-        },
-        {
-          icon_name: "Arrow Left (Circle)",
-          icon_path: "arrow_left_circle",
-          icon_keywords: "arrow left circle",
-        },
-        {
-          icon_name: "Arrow Right(Circle)",
-          icon_path: "arrow_right_circle",
-          icon_keywords: "arrow right circle",
-        },
-        {
-          icon_name: "Battery",
-          icon_path: "battery_full",
-          icon_keywords: "battery power",
-        },
-        {
-          icon_name: "Battery Charging",
-          icon_path: "battery_charging",
-          icon_keywords: "battery charging power",
-        },
-        {
-          icon_name: "Battery Empty",
-          icon_path: "battery_empty",
-          icon_keywords: "battery empty percent power charging",
-        },
-        {
-          icon_name: "Battery Low",
-          icon_path: "battery_low",
-          icon_keywords: "battery low percent power charging",
-        },
-        {
-          icon_name: "Battery Half",
-          icon_path: "battery_half",
-          icon_keywords: "battery half percent power charging",
-        },
-        {
-          icon_name: "Battery 75%",
-          icon_path: "battery_75",
-          icon_keywords: "battery three quarter 75 percent power charging",
-        },
-        {
-          icon_name: "Enter",
-          icon_path: "enter",
-          icon_keywords:
-            "enter log in out exit sign sign-in sign-out 'sign out' 'sign in' 'log in' log out' login logout",
-        },
-        {
-          icon_name: "Enter (Alt)",
-          icon_path: "enter_alt",
-          icon_keywords:
-            "enter log in out exit sign sign-in sign-out 'sign out' 'sign in' 'log in' log out' login logout",
-        },
-        {
-          icon_name: "Inbox",
-          icon_path: "inbox",
-          icon_keywords: "inbox email archive new",
-        },
-        {
-          icon_name: "Inbox (Alt)",
-          icon_path: "inbox_alt",
-          icon_keywords: "inbox email archive new",
-        },
-        {
-          icon_name: "List (Bullet)",
-          icon_path: "list",
-          icon_keywords: "list bullets bulleted",
-        },
-        {
-          icon_name: "List (Numbered)",
-          icon_path: "list_numbered",
-          icon_keywords: "list numbered",
-        },
-        {
-          icon_name: "Printer",
-          icon_path: "printer",
-          icon_keywords: "printer",
-        },
-        {
-          icon_name: "Replicate",
-          icon_path: "replicate",
-          icon_keywords: "replicate squares copy",
-        },
-        {
-          icon_name: "Replicate (Alt)",
-          icon_path: "replicate_alt",
-          icon_keywords: "replicate squares copy",
-        },
-        {
-          icon_name: "Reuse",
-          icon_path: "reuse",
-          icon_keywords: "reuse arrows",
-        },
-        {
-          icon_name: "Sort",
-          icon_path: "sort",
-          icon_keywords: "sort arrows",
-        },
-        {
-          icon_name: "Sort (Alt)",
-          icon_path: "sort_alt",
-          icon_keywords: "sort arrows",
-        },
-        {
-          icon_name: "Alarm Clock",
-          icon_path: "alarm_clock",
-          icon_keywords: "alarm clock",
-        },
-        {
-          icon_name: "Chain",
-          icon_path: "chain",
-          icon_keywords: "chain link anchor",
-        },
-        {
-          icon_name: "Link",
-          icon_path: "link",
-          icon_keywords: "chain link anchor",
-        },
-        {
-          icon_name: "Link (Broken)",
-          icon_path: "link_broken",
-          icon_keywords: "chain link",
-        },
-        {
-          icon_name: "Grid",
-          icon_path: "grid",
-          icon_keywords: "grid columns rows",
-        },
-        {
-          icon_name: "Grid - Small",
-          icon_path: "grid_small",
-          icon_keywords: "grid columns rows",
-        },
-        {
-          icon_name: "Fingerprint",
-          icon_path: "fingerprint",
-          icon_keywords: "fingerprint security bio",
-        },
-        {
-          icon_name: "Refresh",
-          icon_path: "refresh",
-          icon_keywords: "refresh",
-        },
-        {
-          icon_name: "Reset",
-          icon_path: "reset",
-          icon_keywords: "reset restart reboot restore",
-        },
-        {
-          icon_name: "Reset (Alt)",
-          icon_path: "reset_alt",
-          icon_keywords: "reset restart reboot restore",
-        },
-        {
-          icon_name: "Trash",
-          icon_path: "trash",
-          icon_keywords: "trash bin rubbish",
-        },
-        {
-          icon_name: "Bell",
-          icon_path: "bell",
-          icon_keywords: "bell notification ringing alarm",
-        },
-        {
-          icon_name: "Bell (Ringing)",
-          icon_path: "bell_ringing",
-          icon_keywords: "bell notification ringing alarm",
-        },
-        {
-          icon_name: "Bell (Disabled)",
-          icon_path: "bell_disabled",
-          icon_keywords: "bell notification ringing alarm",
-        },
-        {
-          icon_name: "Bell (Snooze)",
-          icon_path: "bell_snooze",
-          icon_keywords: "bell notification ringing alarm",
-        },
-        {
-          icon_name: "Microphone",
-          icon_path: "microphone",
-          icon_keywords: "microphone audio speak",
-        },
-        {
-          icon_name: "Microphone (Muted)",
-          icon_path: "microphone_muted",
-          icon_keywords: "microphone muted speak audio",
-        },
-        {
-          icon_name: "Microphone (Disabled)",
-          icon_path: "microphone_disabled",
-          icon_keywords: "microphone audio speak",
-        },
-        {
-          icon_name: "Reverse",
-          icon_path: "reverse",
-          icon_keywords: "reverse undo shuffle switch",
-        },
-        {
-          icon_name: "Reverse (Alt)",
-          icon_path: "reverse_alt",
-          icon_keywords: "reverse undo shuffle switch",
-        },
-        {
-          icon_name: "Volume (Muted)",
-          icon_path: "volume_muted",
-          icon_keywords: "volume muted none off",
-        },
-        {
-          icon_name: "Volume (None)",
-          icon_path: "volume_0",
-          icon_keywords: "volume off none",
-        },
-        {
-          icon_name: "Volume (Low)",
-          icon_path: "volume_low",
-          icon_keywords: "volume low",
-        },
-        {
-          icon_name: "Volume (High)",
-          icon_path: "volume_high",
-          icon_keywords: "volume high",
-        },
-        {
-          icon_name: "Volume (Add)",
-          icon_path: "volume_add",
-          icon_keywords: "volume add",
-        },
-        {
-          icon_name: "Volume (Minus)",
-          icon_path: "volume_minus",
-          icon_keywords: "volume minus",
-        },
-        {
-          icon_name: "Volume (Disabled)",
-          icon_path: "volume_disabled",
-          icon_keywords: "volume off",
-        },
-        {
-          icon_name: "Add Button",
-          icon_path: "button_add",
-          icon_keywords: "button add plus new",
-        },
-        {
-          icon_name: "Minus Button",
-          icon_path: "button_minus",
-          icon_keywords: "button minus plus new",
-        },
-        {
-          icon_name: "Bookmark (Book)",
-          icon_path: "bookmark_book",
-          icon_keywords: "bookmark book notepad note pad journal",
-        },
-        {
-          icon_name: "Component (Add)",
-          icon_path: "component_add",
-          icon_keywords: "component add plus new create",
-        },
-        {
-          icon_name: "Contract",
-          icon_path: "contract",
-          icon_keywords: "contract",
-        },
-        {
-          icon_name: "Expand",
-          icon_path: "expand",
-          icon_keywords: "expand",
-        },
-        {
-          icon_name: "Fullscreen",
-          icon_path: "fullscreen",
-          icon_keywords: "fullscreen",
-        },
-        {
-          icon_name: "Minimise",
-          icon_path: "minimise",
-          icon_keywords: "minimise",
-        },
-        {
-          icon_name: "Height",
-          icon_path: "height",
-          icon_keywords: "height out",
-        },
-        {
-          icon_name: "Width",
-          icon_path: "width",
-          icon_keywords: "width out",
-        },
-        {
-          icon_name: "Expand Height",
-          icon_path: "expand_height",
-          icon_keywords: "expand height out",
-        },
-        {
-          icon_name: "Expand Width",
-          icon_path: "expand_width",
-          icon_keywords: "expand width out",
-        },
-        {
-          icon_name: "Display",
-          icon_path: "display",
-          icon_keywords: "display project extend",
-        },
-        {
-          icon_name: "Display (Alt)",
-          icon_path: "display_alt",
-          icon_keywords: "display project extend",
-        },
-        {
-          icon_name: "Folder (Add)",
-          icon_path: "folder_add",
-          icon_keywords: "folder new create add plus",
-        },
-        {
-          icon_name: "Folder (Minus)",
-          icon_path: "folder_minus",
-          icon_keywords: "folder new create minus plus",
-        },
-        {
-          icon_name: "Move",
-          icon_path: "move",
-          icon_keywords: "move cursor",
-        },
-        {
-          icon_name: "Drag",
-          icon_path: "drag",
-          icon_keywords: "drag handle",
-        },
-        {
-          icon_name: "Drag (Circle)",
-          icon_path: "drag_circle",
-          icon_keywords: "drag circle handle",
-        },
-        {
-          icon_name: "Newspaper",
-          icon_path: "newspaper",
-          icon_keywords: "newspaper paper read",
-        },
-        {
-          icon_name: "List (Add)",
-          icon_path: "list_add",
-          icon_keywords: "list new add",
-        },
-        {
-          icon_name: "Coin",
-          icon_path: "coin",
-          icon_keywords: "coins money",
-        },
-        {
-          icon_name: "Coins",
-          icon_path: "coins",
-          icon_keywords: "coins money stack",
-        },
-        {
-          icon_name: "Cylinder",
-          icon_path: "cylinder",
-          icon_keywords: "cylinder shape geometry",
-        },
-        {
-          icon_name: "Database",
-          icon_path: "database",
-          icon_keywords: "database servers",
-        },
-        {
-          icon_name: "Disc",
-          icon_path: "disc",
-          icon_keywords: "disc technology media cd",
-        },
-        {
-          icon_name: "Server",
-          icon_path: "server",
-          icon_keywords: "server computer technology stack",
-        },
-        {
-          icon_name: "Heart Rate",
-          icon_path: "heart_rate",
-          icon_keywords: "heart rate monitor health",
-        },
-        {
-          icon_name: "Projector",
-          icon_path: "projector",
-          icon_keywords: "projector screen presentation display",
-        },
-        {
-          icon_name: "Revert",
-          icon_path: "revert",
-          icon_keywords: "revert back undo rewind",
-        },
-        {
-          icon_name: "Diamond",
-          icon_path: "diamond",
-          icon_keywords: "diamond gem",
-        },
-        {
-          icon_name: "Venn",
-          icon_path: "venn",
-          icon_keywords: "venn circles intersect",
-        },
-        {
-          icon_name: "Side Menu",
-          icon_path: "side_menu",
-          icon_keywords: "side menu navigation",
-        },
-        {
-          icon_name: "Info (Circle)",
-          icon_path: "info_circle",
-          icon_keywords: "information circle",
-        },
-        {
-          icon_name: "Question (Circle)",
-          icon_path: "question_circle",
-          icon_keywords: "question circle",
-        },
-        {
-          icon_name: "Warning (Circle)",
-          icon_path: "warning_circle",
-          icon_keywords: "warning circle",
-        },
-        {
-          icon_name: "Warning (Hex)",
-          icon_path: "warning_hex",
-          icon_keywords: "warning hex",
-        },
-        {
-          icon_name: "Warning (Triangle)",
-          icon_path: "warning_triangle",
-          icon_keywords: "warning triangle",
-        },
-        {
-          icon_name: "Bag",
-          icon_path: "bag",
-          icon_keywords: "bag shopping",
-        },
-        {
-          icon_name: "Branch",
-          icon_path: "branch",
-          icon_keywords: "branch",
-        },
-        {
-          icon_name: "Browser",
-          icon_path: "browser",
-          icon_keywords: "browser window",
-        },
-        {
-          icon_name: "Browser (Alt)",
-          icon_path: "browser_alt",
-          icon_keywords: "browser window",
-        },
-        {
-          icon_name: "Capture",
-          icon_path: "capture",
-          icon_keywords: "capture shot camera picture",
-        },
-        {
-          icon_name: "Cart",
-          icon_path: "cart",
-          icon_keywords: "cart shopping trolley trolly",
-        },
-        {
-          icon_name: "Code",
-          icon_path: "code",
-          icon_keywords: "code development embed",
-        },
-        {
-          icon_name: "Credit Card",
-          icon_path: "credit_card",
-          icon_keywords: "credit debit card money transfer",
-        },
-        {
-          icon_name: "Filter",
-          icon_path: "filter",
-          icon_keywords: "filter refine",
-        },
-        {
-          icon_name: "Filter (Circle)",
-          icon_path: "filter_circle",
-          icon_keywords: "filter circle refine",
-        },
-        {
-          icon_name: "Gauge",
-          icon_path: "gauge",
-          icon_keywords: "gauge guage chart",
-        },
-        {
-          icon_name: "Graph (Box)",
-          icon_path: "graph_box",
-          icon_keywords: "graph box chart",
-        },
-        {
-          icon_name: "Bar Graph",
-          icon_path: "graph_bar",
-          icon_keywords: "graph bar chart",
-        },
-        {
-          icon_name: "Hierarchy",
-          icon_path: "hierarchy",
-          icon_keywords: "hierarchy branch flow chart",
-        },
-        {
-          icon_name: "Laptop",
-          icon_path: "laptop",
-          icon_keywords: "laptop computer screen monitor",
-        },
-        {
-          icon_name: "Marquee",
-          icon_path: "marquee",
-          icon_keywords: "marquee selection",
-        },
-        {
-          icon_name: "Target",
-          icon_path: "target",
-          icon_keywords: "target aim",
-        },
-        {
-          icon_name: "Ticket",
-          icon_path: "ticket",
-          icon_keywords: "ticket receipt",
-        },
-        {
-          icon_name: "Toggle",
-          icon_path: "toggle",
-          icon_keywords: "toggle switch",
-        },
-        {
-          icon_name: "circle",
-          icon_path: "circle",
-          icon_keywords: "circle checkbox empty",
-        },
-        {
-          icon_name: "Crosshair",
-          icon_path: "crosshair",
-          icon_keywords: "crosshair aim middle",
-        },
-        {
-          icon_name: "Face (Delighted)",
-          icon_path: "face_delighted",
-          icon_keywords: "face delighted emotion smile elated happy",
-        },
-        {
-          icon_name: "Face (Happy)",
-          icon_path: "face_happy",
-          icon_keywords: "face happy emotion smile",
-        },
-        {
-          icon_name: "Face (Neutral)",
-          icon_path: "face_neutral",
-          icon_keywords: "face neutral emotion bland meh",
-        },
-        {
-          icon_name: "Face (Sad)",
-          icon_path: "face_sad",
-          icon_keywords: "face sad emotion frown",
-        },
-        {
-          icon_name: "Push Left",
-          icon_path: "push_left",
-          icon_keywords: "push left",
-        },
-        {
-          icon_name: "Push Right",
-          icon_path: "push_right",
-          icon_keywords: "push right",
-        },
-        {
-          icon_name: "Record",
-          icon_path: "record",
-          icon_keywords: "record on light",
-        },
-        {
-          icon_name: "Shuffle",
-          icon_path: "shuffle",
-          icon_keywords: "shuffle switch repeat music",
-        },
-        {
-          icon_name: "Support",
-          icon_path: "support",
-          icon_keywords: "support life saver preserver lifebuoy help",
-        },
-        {
-          icon_name: "Zoom In",
-          icon_path: "zoom_in",
-          icon_keywords: "zoom plus in magnifying glass",
-        },
-        {
-          icon_name: "Zoom Out",
-          icon_path: "zoom_out",
-          icon_keywords: "zoom minus out magnifying glass",
-        },
-        {
-          icon_name: "Zoom Reset",
-          icon_path: "zoom_reset",
-          icon_keywords: "zoom reset magnifying glass",
-        },
-        {
-          icon_name: "Zoom Cancel",
-          icon_path: "zoom_cancel",
-          icon_keywords: "zoom cancel magnifying glass",
-        },
-      ];
 
+    <script type="text/javascript" src="/js/data.js"></script>
+    <script>      
       function loadIcons() {
         return {
           search: "",
