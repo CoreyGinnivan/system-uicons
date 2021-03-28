@@ -48,6 +48,13 @@ module.exports = {
         to: "images",
       },
     ]),
+    /// Enable js folder
+    new CopyWebpackPlugin([
+      {
+        from: "src/js",
+        to: "js",
+      },
+    ]),
     new PurgecssPlugin({
       paths: glob.sync([path.join(__dirname, "src/**/*.html")]),
       extractors: [

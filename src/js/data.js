@@ -1769,7 +1769,7 @@ var sourceData = [
       icon_name: "nut",
       icon_path: "nut",
       icon_keywords: "nut",
-  "},
+  },
   {
       icon_name: "pages",
       icon_path: "pages",
