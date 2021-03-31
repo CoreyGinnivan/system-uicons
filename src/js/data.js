@@ -665,6 +665,11 @@ var sourceData = [
     icon_keywords: "trash bin rubbish",
   },
   {
+    icon_name: "Trash (Alt)",
+    icon_path: "trash_alt",
+    icon_keywords: "trash bin rubbish",
+},
+  {
     icon_name: "Bell",
     icon_path: "bell",
     icon_keywords: "bell notification ringing alarm",
@@ -1190,9 +1195,14 @@ var sourceData = [
       icon_keywords: "backspace",
   },
   {
-      icon_name: "backward",
+      icon_name: "Backward",
       icon_path: "backward",
       icon_keywords: "backward",
+  },
+  {
+    icon_name: "Forward",
+    icon_path: "forward",
+    icon_keywords: "forward",
   },
   {
       icon_name: "bluetooth",
@@ -1410,11 +1420,6 @@ var sourceData = [
       icon_keywords: "crop",
   },
   {
-      icon_name: "cross_cricle",
-      icon_path: "cross_cricle",
-      icon_keywords: "cross_cricle",
-  },
-  {
       icon_name: "cube",
       icon_path: "cube",
       icon_keywords: "cube",
@@ -1570,11 +1575,6 @@ var sourceData = [
       icon_keywords: "fork_git",
   },
   {
-      icon_name: "forward",
-      icon_path: "forward",
-      icon_keywords: "forward",
-  },
-  {
       icon_name: "frame",
       icon_path: "frame",
       icon_keywords: "frame",
@@ -1649,11 +1649,6 @@ var sourceData = [
       icon_name: "heart_broken",
       icon_path: "heart_broken",
       icon_keywords: "heart_broken",
-  },
-  {
-      icon_name: "heirarchy",
-      icon_path: "heirarchy",
-      icon_keywords: "heirarchy",
   },
   {
       icon_name: "home_alt",
@@ -1921,11 +1916,6 @@ var sourceData = [
       icon_keywords: "ruler",
   },
   {
-      icon_name: "sad_neutral",
-      icon_path: "sad_neutral",
-      icon_keywords: "sad_neutral",
-  },
-  {
       icon_name: "scale_contract",
       icon_path: "scale_contract",
       icon_keywords: "scale_contract",
@@ -2041,11 +2031,6 @@ var sourceData = [
       icon_keywords: "translate",
   },
   {
-      icon_name: "trash_alt",
-      icon_path: "trash_alt",
-      icon_keywords: "trash_alt",
-  },
-  {
       icon_name: "trophy",
       icon_path: "trophy",
       icon_keywords: "trophy",
@@ -2096,6 +2081,11 @@ var sourceData = [
       icon_keywords: "waves",
   },
   {
+      icon_name: "wifi",
+      icon_path: "wifi",
+      icon_keywords: "wifi",
+  },
+  {
       icon_name: "wifi_error",
       icon_path: "wifi_error",
       icon_keywords: "wifi_error",
@@ -2104,11 +2094,6 @@ var sourceData = [
       icon_name: "wifi_none",
       icon_path: "wifi_none",
       icon_keywords: "wifi_none",
-  },
-  {
-      icon_name: "wifi",
-      icon_path: "wifi",
-      icon_keywords: "wifi",
   },
   {
       icon_name: "window_collapse_left",
@@ -2141,4 +2126,3 @@ var sourceData = [
       icon_keywords: "wrap_forward",
   },
 ];
-
