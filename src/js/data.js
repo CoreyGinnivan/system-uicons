@@ -450,16 +450,6 @@ var sourceData = [
     icon_keywords: "jump backward reply",
   },
   {
-    icon_name: "Jump Up",
-    icon_path: "jump_up",
-    icon_keywords: "jump up",
-  },
-  {
-    icon_name: "Jump Down",
-    icon_path: "jump_down",
-    icon_keywords: "jump down",
-  },
-  {
     icon_name: "Plus",
     icon_path: "plus",
     icon_keywords: "add plus",
@@ -1197,12 +1187,22 @@ var sourceData = [
   {
     icon_name: "Backward",
     icon_path: "backward",
-    icon_keywords: "backward",
+    icon_keywords: "backward jump arrow",
   },
   {
     icon_name: "Forward",
     icon_path: "forward",
-    icon_keywords: "forward",
+    icon_keywords: "forward jump arrow",
+  },
+  {
+    icon_name: "Jump Up",
+    icon_path: "jump_up",
+    icon_keywords: "jump up arrow",
+  },
+  {
+    icon_name: "Jump Down",
+    icon_path: "jump_down",
+    icon_keywords: "jump down arrow",
   },
   {
     icon_name: "bluetooth",
