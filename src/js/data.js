@@ -128,6 +128,11 @@ var sourceData = [
     icon_keywords: "check circle tick approved correct yes",
   },
   {
+    icon_name: "Check Breakthrough (Circle)",
+    icon_path: "check_circle_outside",
+    icon_keywords: "check circle tick approved correct yes",
+  },
+  {
     icon_name: "Cross (Circle)",
     icon_path: "cross_circle",
     icon_keywords: "circle cross delete remove wrong incorrect no close",
@@ -1235,9 +1240,14 @@ var sourceData = [
       icon_keywords: "bookmark",
   },
   {
-      icon_name: "box_download",
-      icon_path: "box_download",
-      icon_keywords: "box_download",
+    icon_name: "cube",
+    icon_path: "cube",
+    icon_keywords: "cube",
+  },
+  {
+      icon_name: "box",
+      icon_path: "box",
+      icon_keywords: "box",
   },
   {
       icon_name: "box_open",
@@ -1245,9 +1255,9 @@ var sourceData = [
       icon_keywords: "box_open",
   },
   {
-      icon_name: "box",
-      icon_path: "box",
-      icon_keywords: "box",
+      icon_name: "box_download",
+      icon_path: "box_download",
+      icon_keywords: "box_download",
   },
   {
       icon_name: "briefcase",
@@ -1298,11 +1308,6 @@ var sourceData = [
       icon_name: "cast",
       icon_path: "cast",
       icon_keywords: "cast",
-  },
-  {
-      icon_name: "check_circle_outside",
-      icon_path: "check_circle_outside",
-      icon_keywords: "check_circle_outside",
   },
   {
       icon_name: "checkbox_checked",
@@ -1418,11 +1423,6 @@ var sourceData = [
       icon_name: "crop",
       icon_path: "crop",
       icon_keywords: "crop",
-  },
-  {
-      icon_name: "cube",
-      icon_path: "cube",
-      icon_keywords: "cube",
   },
   {
       icon_name: "directions",
@@ -1550,14 +1550,14 @@ var sourceData = [
       icon_keywords: "flag",
   },
   {
-      icon_name: "flame_alt",
-      icon_path: "flame_alt",
-      icon_keywords: "flame_alt",
-  },
-  {
       icon_name: "flame",
       icon_path: "flame",
       icon_keywords: "flame",
+  },
+  {
+      icon_name: "flame_alt",
+      icon_path: "flame_alt",
+      icon_keywords: "flame_alt",
   },
   {
       icon_name: "flip_view",
@@ -1611,14 +1611,14 @@ var sourceData = [
       icon_keywords: "grid_circles_add",
   },
   {
+    icon_name: "grid_squares",
+    icon_path: "grid_squares",
+    icon_keywords: "grid_squares",
+  },
+  {
       icon_name: "grid_squares_add",
       icon_path: "grid_squares_add",
       icon_keywords: "grid_squares_add",
-  },
-  {
-      icon_name: "grid_squares",
-      icon_path: "grid_squares",
-      icon_keywords: "grid_squares",
   },
   {
       icon_name: "hand",
