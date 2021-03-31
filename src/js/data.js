@@ -1230,19 +1230,14 @@ var sourceData = [
       icon_keywords: "book",
   },
   {
-      icon_name: "bookmark_book",
-      icon_path: "bookmark_book",
-      icon_keywords: "bookmark_book",
-  },
-  {
       icon_name: "bookmark",
       icon_path: "bookmark",
       icon_keywords: "bookmark",
   },
   {
-    icon_name: "cube",
-    icon_path: "cube",
-    icon_keywords: "cube",
+      icon_name: "cube",
+      icon_path: "cube",
+      icon_keywords: "cube",
   },
   {
       icon_name: "box",
@@ -1538,11 +1533,6 @@ var sourceData = [
       icon_name: "filtering",
       icon_path: "filtering",
       icon_keywords: "filtering",
-  },
-  {
-      icon_name: "fingerprint",
-      icon_path: "fingerprint",
-      icon_keywords: "fingerprint",
   },
   {
       icon_name: "flag",
@@ -1981,11 +1971,6 @@ var sourceData = [
       icon_keywords: "moon",
   },
   {
-      icon_name: "support",
-      icon_path: "support",
-      icon_keywords: "support",
-  },
-  {
       icon_name: "swap",
       icon_path: "swap",
       icon_keywords: "swap",
@@ -2009,11 +1994,6 @@ var sourceData = [
       icon_name: "tag_milestone",
       icon_path: "tag_milestone",
       icon_keywords: "tag_milestone",
-  },
-  {
-      icon_name: "ticket",
-      icon_path: "ticket",
-      icon_keywords: "ticket",
   },
   {
       icon_name: "timeline",
