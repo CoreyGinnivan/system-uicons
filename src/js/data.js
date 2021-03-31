@@ -1806,8 +1806,8 @@ var sourceData = [
       icon_keywords: "panel_top",
   },
   {
-      icon_name: "paper_plan_alt",
-      icon_path: "paper_plan_alt",
+      icon_name: "paper_plane_alt",
+      icon_path: "paper_plane_alt",
       icon_keywords: "paper_plan_alt",
   },
   {
@@ -1816,14 +1816,14 @@ var sourceData = [
       icon_keywords: "paper_plane",
   },
   {
-      icon_name: "paragprah_end",
-      icon_path: "paragprah_end",
-      icon_keywords: "paragprah_end",
+      icon_name: "paragraph_end",
+      icon_path: "paragraph_end",
+      icon_keywords: "paragraph_end",
   },
   {
-      icon_name: "paragprah_start",
-      icon_path: "paragprah_start",
-      icon_keywords: "paragprah_start",
+      icon_name: "paragraph_start",
+      icon_path: "paragraph_start",
+      icon_keywords: "paragraph_start",
   },
   {
       icon_name: "paragraph_center",
