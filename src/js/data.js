@@ -1030,6 +1030,11 @@ var sourceData = [
     icon_keywords: "toggle switch",
   },
   {
+    icon_name: "Toggles",
+    icon_path: "toggles",
+    icon_keywords: "toggle toggles",
+  },
+  {
     icon_name: "circle",
     icon_path: "circle",
     icon_keywords: "circle checkbox empty",
@@ -2029,11 +2034,6 @@ var sourceData = [
       icon_name: "todo",
       icon_path: "todo",
       icon_keywords: "todo",
-  },
-  {
-      icon_name: "toggles",
-      icon_path: "toggles",
-      icon_keywords: "toggles",
   },
   {
       icon_name: "translate",
