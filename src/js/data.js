@@ -1641,7 +1641,7 @@ var sourceData = [
   },
 
   {
-    icon_name: "Blobe",
+    icon_name: "Globe",
     icon_path: "globe",
     icon_keywords: "globe world countries country foreign nation earth planet global location",
   },
