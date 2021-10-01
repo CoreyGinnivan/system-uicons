@@ -6,3 +6,7 @@ Use the icons how you want, for free, and without any attribution.
 
 [https://systemuicons.com/](https://systemuicons.com/)
 
+
+# Looking for a React library of System UIcons?
+
+[Martin Zlámal](https://github.com/mrtnzlml) has created an awesome open source community icon group over at [System UIcons React](https://github.com/adeira/icons)
