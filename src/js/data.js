@@ -42,92 +42,92 @@ var sourceData = [
   {
     icon_name: "Paperclip",
     icon_path: "paperclip",
-    icon_keywords: "paperclip attachment link",
+    icon_keywords: "paperclip attachment link document attach add styles",
   },
   {
     icon_name: "Phone (Portrait)",
     icon_path: "phone_portrait",
-    icon_keywords: "iphone android phone portrait mobile talk",
+    icon_keywords: "iphone android phone portrait mobile talk device devices electronic tech",
   },
   {
     icon_name: "Phone (Landscape)",
     icon_path: "phone_landscape",
-    icon_keywords: "iphone android phone landscape mobile talk",
+    icon_keywords: "iphone android phone landscape mobile talk device devices electronic tech",
   },
   {
     icon_name: "Phone (Alt - Portrait)",
     icon_path: "iphone_portrait",
-    icon_keywords: "iphone android phone portrait mobile talk",
+    icon_keywords: "iphone android phone portrait mobile talk device devices electronic tech",
   },
   {
     icon_name: "Phone (Alt - Landscape)",
     icon_path: "iphone_landscape",
-    icon_keywords: "iphone android phone landscape mobile talk",
+    icon_keywords: "iphone android phone landscape mobile talk device devices electronic tech",
   },
   {
     icon_name: "Calendar",
     icon_path: "calendar",
-    icon_keywords: "calendar",
+    icon_keywords: "calendar month date date time",
   },
   {
     icon_name: "Calendar (Day)",
     icon_path: "calendar_day",
-    icon_keywords: "calendar day",
+    icon_keywords: "calendar day month date date time",
   },
   {
     icon_name: "Calendar (Days)",
     icon_path: "calendar_days",
-    icon_keywords: "calendar days",
+    icon_keywords: "calendar days month date date time",
   },
   {
     icon_name: "Calendar (Date)",
     icon_path: "calendar_date",
-    icon_keywords: "calendar date",
+    icon_keywords: "calendar date month date date time",
   },
   {
     icon_name: "Calendar (End)",
     icon_path: "calendar_last_day",
-    icon_keywords: "calendar day month end last final year",
+    icon_keywords: "calendar day month end last final year month date date time",
   },
   {
     icon_name: "Calendar (Week)",
     icon_path: "calendar_week",
-    icon_keywords: "calendar week days",
+    icon_keywords: "calendar week days month date date time",
   },
   {
     icon_name: "Calendar (Month)",
     icon_path: "calendar_month",
-    icon_keywords: "calendar month week",
+    icon_keywords: "calendar month week month date date time",
   },
   {
     icon_name: "Calendar (Split)",
     icon_path: "calendar_split",
-    icon_keywords: "calendar split",
+    icon_keywords: "calendar split month date date time",
   },
   {
     icon_name: "Calendar (Add)",
     icon_path: "calendar_add",
-    icon_keywords: "calendar add",
+    icon_keywords: "calendar add month date date time",
   },
   {
     icon_name: "Calendar (Remove)",
     icon_path: "calendar_remove",
-    icon_keywords: "calendar remove delete cancel",
+    icon_keywords: "calendar remove delete cancel month date date time",
   },
   {
     icon_name: "Calendar (Move)",
     icon_path: "calendar_move",
-    icon_keywords: "calendar move",
+    icon_keywords: "calendar move month date date time",
   },
   {
     icon_name: "Check (Circle)",
     icon_path: "check_circle",
-    icon_keywords: "check circle tick approved correct yes",
+    icon_keywords: "check circle tick approved correct yes task",
   },
   {
     icon_name: "Check Breakthrough (Circle)",
     icon_path: "check_circle_outside",
-    icon_keywords: "check circle tick approved correct yes",
+    icon_keywords: "check circle tick approved correct yes task",
   },
   {
     icon_name: "Cross (Circle)",
@@ -137,7 +137,7 @@ var sourceData = [
   {
     icon_name: "Check",
     icon_path: "check",
-    icon_keywords: "check tick approved correct yes",
+    icon_keywords: "check tick approved correct yes task",
   },
   {
     icon_name: "Cross",
@@ -147,12 +147,12 @@ var sourceData = [
   {
     icon_name: "Exit (Left)",
     icon_path: "exit_left",
-    icon_keywords: "exit left",
+    icon_keywords: "exit left logout sign out signout door away",
   },
   {
     icon_name: "Exit (Right)",
     icon_path: "exit_right",
-    icon_keywords: "exit right",
+    icon_keywords: "exit right logout sign out signout door away",
   },
   {
     icon_name: "Folder",
@@ -187,7 +187,7 @@ var sourceData = [
   {
     icon_name: "Search",
     icon_path: "search",
-    icon_keywords: "search magnifying glass",
+    icon_keywords: "search magnifying magnify glass",
   },
   {
     icon_name: "Sliders",
@@ -197,12 +197,12 @@ var sourceData = [
   {
     icon_name: "Thumbs Up",
     icon_path: "thumbs_up",
-    icon_keywords: "thumbs up like unlike",
+    icon_keywords: "thumbs up like unlike fav love favorite favourite vote",
   },
   {
     icon_name: "Thumbs Down",
     icon_path: "thumbs_down",
-    icon_keywords: "thumbs down like unlike",
+    icon_keywords: "thumbs down like unlike dislike vote",
   },
   {
     icon_name: "Version",
@@ -217,37 +217,37 @@ var sourceData = [
   {
     icon_name: "Coffee",
     icon_path: "coffee",
-    icon_keywords: "coffee caffeine perk",
+    icon_keywords: "coffee caffeine perk mug steam hot tea percolate drink cup wake",
   },
   {
     icon_name: "Compass",
     icon_path: "compass",
-    icon_keywords: "compass safari",
+    icon_keywords: "compass safari direction wayfind find directions route navigation",
   },
   {
     icon_name: "Document",
     icon_path: "document",
-    icon_keywords: "document file",
+    icon_keywords: "document file files text writing text editor",
   },
   {
     icon_name: "Download",
     icon_path: "download",
-    icon_keywords: "download",
+    icon_keywords: "download arrow down sync pull",
   },
   {
     icon_name: "Download (Alt)",
     icon_path: "download_alt",
-    icon_keywords: "download alt",
+    icon_keywords: "download alt down sync arrow pull",
   },
   {
     icon_name: "Upload",
     icon_path: "upload",
-    icon_keywords: "upload",
+    icon_keywords: "upload up uplink arrow",
   },
   {
     icon_name: "Upload (Alt)",
     icon_path: "upload_alt",
-    icon_keywords: "upload",
+    icon_keywords: "upload up uplink arrow push",
   },
   {
     icon_name: "Location",
@@ -257,12 +257,12 @@ var sourceData = [
   {
     icon_name: "Lock (Closed)",
     icon_path: "lock",
-    icon_keywords: "lock padlock security",
+    icon_keywords: "lock padlock security key secure safe",
   },
   {
     icon_name: "Lock (Open)",
     icon_path: "lock_open",
-    icon_keywords: "lock padlock security",
+    icon_keywords: "lock padlock security key secure safe",
   },
   {
     icon_name: "Mail",
@@ -277,7 +277,7 @@ var sourceData = [
   {
     icon_name: "Mail (New)",
     icon_path: "mail_new",
-    icon_keywords: "mail_ ew",
+    icon_keywords: "mail new email add create send receive news communicate communication",
   },
   {
     icon_name: "Mail (Delete)",
@@ -302,12 +302,12 @@ var sourceData = [
   {
     icon_name: "Maximise",
     icon_path: "maximise",
-    icon_keywords: "maximise",
+    icon_keywords: "maximise maximize expand enlarge big full size",
   },
   {
     icon_name: "Paper",
     icon_path: "paper",
-    icon_keywords: "paper document file",
+    icon_keywords: "paper document file blank",
   },
   {
     icon_name: "Paper Folded",
@@ -327,12 +327,12 @@ var sourceData = [
   {
     icon_name: "Archive",
     icon_path: "archive",
-    icon_keywords: "archive box save",
+    icon_keywords: "archive box save cardboard",
   },
   {
     icon_name: "Unarchive",
     icon_path: "unarchive",
-    icon_keywords: "unarchive box save",
+    icon_keywords: "unarchive box save cardboard",
   },
   {
     icon_name: "Chevron Up",
@@ -422,12 +422,12 @@ var sourceData = [
   {
     icon_name: "User (Add)",
     icon_path: "user_add",
-    icon_keywords: "user add",
+    icon_keywords: "user add customer person create invite",
   },
   {
     icon_name: "User (Remove)",
     icon_path: "user_remove",
-    icon_keywords: "user remove",
+    icon_keywords: "user remove delete customer person avatar",
   },
   {
     icon_name: "User (Female Circle)",
@@ -442,17 +442,17 @@ var sourceData = [
   {
     icon_name: "Users",
     icon_path: "users",
-    icon_keywords: "users male circle person customer avatar",
+    icon_keywords: "users male person customer avatar",
   },
   {
     icon_name: "Redo",
     icon_path: "redo",
-    icon_keywords: "redo arrow",
+    icon_keywords: "redo arrow jump forward",
   },
   {
     icon_name: "Undo",
     icon_path: "undo",
-    icon_keywords: "undo arrow",
+    icon_keywords: "undo arrow jack backward",
   },
   {
     icon_name: "Jump Left",
@@ -477,12 +477,12 @@ var sourceData = [
   {
     icon_name: "Plus",
     icon_path: "plus",
-    icon_keywords: "add plus",
+    icon_keywords: "add plus create new",
   },
   {
     icon_name: "Minus",
     icon_path: "minus",
-    icon_keywords: "minus remove negative take circle",
+    icon_keywords: "minus remove negative take",
   },
   {
     icon_name: "Plus (Circle)",
@@ -812,12 +812,12 @@ var sourceData = [
   {
     icon_name: "Add Button",
     icon_path: "button_add",
-    icon_keywords: "button add plus new",
+    icon_keywords: "button add plus new box",
   },
   {
     icon_name: "Minus Button",
     icon_path: "button_minus",
-    icon_keywords: "button minus plus new",
+    icon_keywords: "button minus plus new box",
   },
   {
     icon_name: "Bookmark (Book)",
@@ -827,37 +827,37 @@ var sourceData = [
   {
     icon_name: "Component (Add)",
     icon_path: "component_add",
-    icon_keywords: "component add plus new create",
+    icon_keywords: "component add plus new create box",
   },
   {
     icon_name: "Contract",
     icon_path: "contract",
-    icon_keywords: "contract",
+    icon_keywords: "contract minimise minimize small smaller",
   },
   {
     icon_name: "Expand",
     icon_path: "expand",
-    icon_keywords: "expand",
+    icon_keywords: "expand enhance larger bigger maximize maximise",
   },
   {
     icon_name: "Fullscreen",
     icon_path: "fullscreen",
-    icon_keywords: "fullscreen",
+    icon_keywords: "fullscreen maximize maximise enlarge",
   },
   {
     icon_name: "Minimise",
     icon_path: "minimise",
-    icon_keywords: "minimise",
+    icon_keywords: "minimise minimize smaller contract shrink",
   },
   {
     icon_name: "Height",
     icon_path: "height",
-    icon_keywords: "height out",
+    icon_keywords: "height out expand taller higher high",
   },
   {
     icon_name: "Width",
     icon_path: "width",
-    icon_keywords: "width out",
+    icon_keywords: "width out wide wider wide expand",
   },
   {
     icon_name: "Expand Height",
@@ -1072,7 +1072,7 @@ var sourceData = [
   {
     icon_name: "Laptop",
     icon_path: "laptop",
-    icon_keywords: "laptop computer screen monitor",
+    icon_keywords: "laptop computer screen monitor display",
   },
   {
     icon_name: "Marquee",
@@ -1102,7 +1102,7 @@ var sourceData = [
   {
     icon_name: "Circle",
     icon_path: "circle",
-    icon_keywords: "circle checkbox empty radio off",
+    icon_keywords: "circle checkbox empty radio off task",
   },
   {
     icon_name: "Crosshair",
@@ -1132,52 +1132,52 @@ var sourceData = [
   {
     icon_name: "Push Left",
     icon_path: "push_left",
-    icon_keywords: "push left",
+    icon_keywords: "push left arrow direction expand collapse hide show align",
   },
   {
     icon_name: "Push Right",
     icon_path: "push_right",
-    icon_keywords: "push right",
+    icon_keywords: "push right arrow direction expand collapse hide show align",
   },
   {
     icon_name: "Push Down",
     icon_path: "push_down",
-    icon_keywords: "push down",
+    icon_keywords: "push down arrow direction expand collapse hide show align",
   },
   {
     icon_name: "Push Up",
     icon_path: "push_up",
-    icon_keywords: "push up",
+    icon_keywords: "push up arrow direction expand collapse hide show align",
   },
   {
     icon_name: "Pull Left",
     icon_path: "pull_left",
-    icon_keywords: "pull left",
+    icon_keywords: "pull left arrow direction expand collapse hide show align",
   },
   {
     icon_name: "Pull Right",
     icon_path: "pull_right",
-    icon_keywords: "pull right",
+    icon_keywords: "pull right arrow direction expand collapse hide show align",
   },
   {
     icon_name: "Pull Down",
     icon_path: "pull_down",
-    icon_keywords: "pull down",
+    icon_keywords: "pull down arrow direction expand collapse hide show align",
   },
   {
     icon_name: "Pull Up",
     icon_path: "pull_up",
-    icon_keywords: "pull up",
+    icon_keywords: "pull up arrow direction expand collapse hide show align",
   },
   {
     icon_name: "Record",
     icon_path: "record",
-    icon_keywords: "record on light",
+    icon_keywords: "record on light live go",
   },
   {
     icon_name: "Shuffle",
     icon_path: "shuffle",
-    icon_keywords: "shuffle switch repeat music",
+    icon_keywords: "shuffle switch repeat music arrow arrows",
   },
   {
     icon_name: "Support",
@@ -1187,22 +1187,22 @@ var sourceData = [
   {
     icon_name: "Zoom In",
     icon_path: "zoom_in",
-    icon_keywords: "zoom plus in magnifying glass",
+    icon_keywords: "zoom in plus in magnifying magnify glass",
   },
   {
     icon_name: "Zoom Out",
     icon_path: "zoom_out",
-    icon_keywords: "zoom minus out magnifying glass",
+    icon_keywords: "zoom out minus out magnifying magnify glass",
   },
   {
     icon_name: "Zoom Reset",
     icon_path: "zoom_reset",
-    icon_keywords: "zoom reset magnifying glass",
+    icon_keywords: "zoom reset magnifying magnify glass",
   },
   {
     icon_name: "Zoom Cancel",
     icon_path: "zoom_cancel",
-    icon_keywords: "zoom cancel magnifying glass",
+    icon_keywords: "zoom cancel magnifying magnify glass",
   },
   {
     icon_name: "Airplay",
@@ -1212,12 +1212,12 @@ var sourceData = [
   {
     icon_name: "Align Horizontal",
     icon_path: "align_horizontal",
-    icon_keywords: "align horizontal",
+    icon_keywords: "align center middle push horizontal",
   },
   {
-    icon_name: "Align Vertical",
+    icon_name: "Align Veritcal",
     icon_path: "align_vertical",
-    icon_keywords: "align vertical",
+    icon_keywords: "align center middle push vertical",
   },
   {
     icon_name: "Angle",
@@ -1252,12 +1252,12 @@ var sourceData = [
   {
     icon_name: "Backspace",
     icon_path: "backspace",
-    icon_keywords: "backspace delete",
+    icon_keywords: "backspace delete back remove key",
   },
   {
     icon_name: "Backward",
     icon_path: "backward",
-    icon_keywords: "backward jump arrow direction",
+    icon_keywords: "backward jump arrow direction reply",
   },
   {
     icon_name: "Forward",
@@ -1267,27 +1267,27 @@ var sourceData = [
   {
     icon_name: "Upward",
     icon_path: "upward",
-    icon_keywords: "jump up arrow direction",
+    icon_keywords: "jump up arrow direction up upward",
   },
   {
     icon_name: "Downward",
     icon_path: "downward",
-    icon_keywords: "jump down arrow direction",
+    icon_keywords: "jump down arrow direction down downward",
   },
   {
     icon_name: "Bluetooth",
     icon_path: "bluetooth",
-    icon_keywords: "bluetooth media",
+    icon_keywords: "bluetooth media signal connection",
   },
   {
     icon_name: "Book",
     icon_path: "book",
-    icon_keywords: "book",
+    icon_keywords: "book read words text novel write empty blank",
   },
   {
     icon_name: "Book (With Text)",
     icon_path: "book_text",
-    icon_keywords: "book text",
+    icon_keywords: "book text read words text novel write newspaper",
   },
   {
     icon_name: "Book (Closed)",
@@ -1297,12 +1297,12 @@ var sourceData = [
   {
     icon_name: "Bookmark",
     icon_path: "bookmark",
-    icon_keywords: "bookmark book",
+    icon_keywords: "bookmark book write keep read mark",
   },
   {
     icon_name: "Cube",
     icon_path: "cube",
-    icon_keywords: "cube",
+    icon_keywords: "cube box 3d ice cold",
   },
   {
     icon_name: "Box",
@@ -1327,7 +1327,7 @@ var sourceData = [
   {
     icon_name: "Calculator",
     icon_path: "calculator",
-    icon_keywords: "calculator",
+    icon_keywords: "calculator math maths",
   },
   {
     icon_name: "camera",
@@ -1362,7 +1362,7 @@ var sourceData = [
   {
     icon_name: "Carousel",
     icon_path: "carousel",
-    icon_keywords: "carousel cards view",
+    icon_keywords: "carousel cards view slider",
   },
   {
     icon_name: "Cast",
@@ -1372,12 +1372,12 @@ var sourceData = [
   {
     icon_name: "Checkbox (Empty)",
     icon_path: "checkbox_empty",
-    icon_keywords: "checkbox empty unchecked unticked",
+    icon_keywords: "checkbox empty unchecked unticked box task",
   },
   {
     icon_name: "Checkbox (Checked)",
     icon_path: "checkbox_checked",
-    icon_keywords: "checkbox checked tick",
+    icon_keywords: "checkbox checked tick box task todo",
   },
   {
     icon_name: "Chevron (Open)",
@@ -1402,27 +1402,27 @@ var sourceData = [
   {
     icon_name: "Clipboard",
     icon_path: "clipboard",
-    icon_keywords: "clipboard",
+    icon_keywords: "clipboard copy file document",
   },
   {
     icon_name: "Clipboard (Add)",
     icon_path: "clipboard_add",
-    icon_keywords: "clipboard add plus",
+    icon_keywords: "clipboard add plus copy save",
   },
   {
     icon_name: "Clipboard (Check)",
     icon_path: "clipboard_check",
-    icon_keywords: "clipboard check",
+    icon_keywords: "clipboard check copy save saved",
   },
   {
     icon_name: "Clipboard (Copy)",
     icon_path: "clipboard_copy",
-    icon_keywords: "clipboard copy",
+    icon_keywords: "clipboard copy file document save",
   },
   {
     icon_name: "Clipboard (Cross)",
     icon_path: "clipboard_cross",
-    icon_keywords: "clipboard cross",
+    icon_keywords: "clipboard cross delete document",
   },
   {
     icon_name: "Clipboard (Notes)",
@@ -1432,7 +1432,7 @@ var sourceData = [
   {
     icon_name: "Clipboard (Remove)",
     icon_path: "clipboard_remove",
-    icon_keywords: "clipboard remove minus",
+    icon_keywords: "clipboard remove minus delete",
   },
   {
     icon_name: "Clock",
@@ -1512,12 +1512,12 @@ var sourceData = [
   {
     icon_name: "Door",
     icon_path: "door",
-    icon_keywords: "door enter exit entry signin sign in out log",
+    icon_keywords: "door enter exit entry signin sign in out log out logout",
   },
   {
     icon_name: "Door (Alt)",
     icon_path: "door_alt",
-    icon_keywords: "door enter exit entry signin sign in out log",
+    icon_keywords: "door enter exit entry signin sign in out log in login",
   },
   {
     icon_name: "Drag (Vertical)",
@@ -1535,9 +1535,9 @@ var sourceData = [
     icon_keywords: "duplicate copy new make replicate",
   },
   {
-    icon_name: "Episodes",
-    icon_path: "episodes",
-    icon_keywords: "episodes",
+    icon_name: "Stack",
+    icon_path: "stack",
+    icon_keywords: "episodes tv stack multiple",
   },
   {
     icon_name: "external",

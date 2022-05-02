@@ -302,11 +302,11 @@
                 class="absolute top-0 left-0 right-0 z-50 px-2 py-1 mx-auto -mt-8 text-sm text-center text-white bg-black rounded"
                 style="width: fit-content"
                 x-transition:enter="transition ease-out duration-200"
-                x-transition:enter-start="opacity-0 transform scale-90"
-                x-transition:enter-end="opacity-100 transform scale-100"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
                 x-transition:leave="transition ease-in duration-500 "
-                x-transition:leave-start="opacity-100 transform scale-100"
-                x-transition:leave-end="opacity-0 transform scale-90"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
               >
                 <template x-if="downloadType == 'download-svg'"
                   ><span>Downloading!</span></template
@@ -322,7 +322,7 @@
             <img
               :src="`images/icons/` + item.icon_path + `.svg`"
               :alt="item.icon_name"
-              class="transition duration-200 transform group-hover:scale-200"
+              class="transition duration-200 group-hover:scale-200"
               loading="lazy"
             />
             <p

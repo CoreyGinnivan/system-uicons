@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./src/**/*.html"],
+  content: ["./src/**/*.html"],
   theme: {
     fontFamily: {
       mono: [
@@ -9,10 +9,6 @@ module.exports = {
     scale: {
       "200": "2",
     },
-  },
-  variants: {
-    scale: ["responsive", "hover", "focus", "group-hover"],
-    backgroundColor: ["responsive", "hover", "focus", "focus-within"],
   },
   plugins: [
     // Some useful comment
