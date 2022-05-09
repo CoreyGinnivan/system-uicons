@@ -49,7 +49,7 @@
   </head>
   <body
     class="flex flex-col min-h-screen font-mono leading-normal tracking-normal bg-white"
-    x-data="loadIcons(), showBar"
+    x-data="showBar: false, loadIcons()"
   >
     <main class="flex-grow">
       <nav class="flex justify-between p-4 text-sm md:p-6 lg:p-8 md:text-base">
@@ -408,7 +408,6 @@
           },
         };
       }
-      var showBar = false;
     </script>
     <!-- Fathom - beautiful, simple website analytics -->
     <script
