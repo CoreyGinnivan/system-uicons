@@ -38,10 +38,7 @@
       property="twitter:image"
       content="https://systemuicons.com/images/ogp/systemuicons_banner.png"
     />
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
-      defer
-    ></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
     <link
       rel="mask-icon"
@@ -57,7 +54,7 @@
     <main class="flex-grow">
       <nav class="flex justify-between p-4 text-sm md:p-6 lg:p-8 md:text-base">
         <a class="font-extrabold" href="/">System UIcons</a>
-        <div class="space-x-3 md:space-x-8">
+        <div class="flex space-x-3 md:space-x-8">
           <!-- <a class="hover:underline" href="/about">Behind the design</a>
           <a class="hover:underline" href="/changelog">Changelog</a> -->
           <a
@@ -68,11 +65,16 @@
             >GitHub</a
           >
           <a
-            class="hover:underline"
+            class="flex hover:underline"
             href="https://github.com/sponsors/CoreyGinnivan"
             rel="noreferrer"
             target="_blank"
-            >Sponsor</a
+            >
+              <span class="mr-2">
+                <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(1 3)"><path d="m17.5 8.5v3c0 1.2994935-3.1340068 3-7 3-3.86599325 0-7-1.7005065-7-3 0-.4275221 0-1.2608554 0-2.5"/><path d="m3.79385803 9.25873308c.86480173 1.14823502 3.53999333 2.22489962 6.70614197 2.22489962 3.8659932 0 7-1.60524016 7-2.98595204 0-.77476061-.9867994-1.62391104-2.5360034-2.22001882"/><path d="m14.5 3.5v3c0 1.29949353-3.1340068 3-7 3-3.86599325 0-7-1.70050647-7-3 0-.64128315 0-2.35871685 0-3"/><path d="m7.5 6.48363266c3.8659932 0 7-1.60524012 7-2.985952 0-1.38071187-3.1340068-2.99768066-7-2.99768066-3.86599325 0-7 1.61696879-7 2.99768066 0 1.38071188 3.13400675 2.985952 7 2.985952z"/></g></svg>
+              </span>
+              <span class="whitespace-no-wrap">Sponsor</span>
+            </a
           >
         </div>
       </nav>
@@ -122,13 +124,15 @@
         />
       </div>
       <div
-        class="sticky top-0 z-10 flex flex-col px-4 py-4 space-y-2 bg-white border-t border-gray-300 md:space-y-0 md:flex-row md:px-6 lg:px-8"
+        class="sticky top-0 z-50 flex flex-col px-4 py-4 space-y-2 bg-white border-t border-gray-100 md:space-y-0 md:flex-row md:px-6 lg:px-8"
+        :class="{ 'shadow-md duration-100' : showBar }"
+        @scroll.window="showBar = (window.pageYOffset > 450) ? true : false"
       >
         <div
-          class="flex flex-col p-1 space-x-0 space-y-1 bg-gray-200 rounded md:flex-row md:space-x-1 md:space-y-0"
+          class="flex flex-col p-1 space-x-0 space-y-1 bg-gray-200 mr-2 rounded md:flex-row md:space-x-1 md:space-y-0"
         >
           <label
-            class="inline-flex flex-no-wrap items-center w-full h-full px-2 py-2 text-sm transition duration-200 rounded cursor-pointer lg:text-base hover:bg-gray-100 hover:text-black md:w-auto md:py-0"
+            class="inline-flex flex-no-wrap items-center w-full h-full px-2 py-2 text-sm duration-200 rounded cursor-pointer lg:text-base hover:bg-gray-100 hover:text-black md:w-auto md:py-0"
             :class="downloadType === 'copy-svg' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -166,10 +170,10 @@
                 </g>
               </svg>
             </span>
-            <span class="whitespace-no-wrap">Copy SVG Code</span>
+            <span class="whitespace-no-wrap">Copy SVG Element</span>
           </label>
           <label
-            class="inline-flex flex-no-wrap items-center w-full h-full px-2 py-2 text-sm transition duration-200 rounded cursor-pointer lg:text-base hover:bg-gray-100 hover:text-black md:w-auto md:py-0"
+            class="inline-flex flex-no-wrap items-center w-full h-full px-2 py-2 text-sm duration-200 rounded cursor-pointer lg:text-base hover:bg-gray-100 hover:text-black md:w-auto md:py-0"
             :class="downloadType === 'copy-cdn' ? 'bg-white shadow' : 'text-gray-600'"
           >
             <input
@@ -278,7 +282,7 @@
       </div>
 
       <div
-        class="grid grid-cols-2 gap-2 p-4 md:p-6 lg:p-8 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-8 md:gap-4"
+        class="grid grid-cols-2 m-4 md:m-6 lg:m-8 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-10 divide-x divide-y divide-gray-200 border-r border-b border-solid border-gray-200"
       >
         <template x-for="(item, index) in filteredIcons" :key="index">
           <a
@@ -290,55 +294,53 @@
             item.icon_path +
             `.svg`"
             x-bind:download="downloadType === 'download-svg' && item.icon_name"
-            class="relative flex flex-col items-center justify-center h-32 p-2 text-gray-700 transition duration-150 ease-in-out bg-white rounded shadow cursor-pointer group hover:shadow-xl md:h-40"
+            class="relative flex flex-col items-center justify-center h-32 p-2 text-gray-700 duration-150 ease-in-out bg-white cursor-pointer group hover:z-10 hover:shadow-xl md:h-40"
             @click="handleClick(item, downloadType, $event, $dispatch)"
           >
-            <div>
-              <div
-                role="alert"
-                x-show="copied === item.icon_name"
-                x-on:show:toast.document="copied = $event.detail"
-                x-cloak
-                class="absolute top-0 left-0 right-0 z-50 px-2 py-1 mx-auto -mt-8 text-sm text-center text-white bg-black rounded"
-                style="width: fit-content"
-                x-transition:enter="transition ease-out duration-200"
-                x-transition:enter-start="opacity-0 scale-90"
-                x-transition:enter-end="opacity-100 scale-100"
-                x-transition:leave="transition ease-in duration-500 "
-                x-transition:leave-start="opacity-100 scale-100"
-                x-transition:leave-end="opacity-0 scale-90"
+            <div
+              role="alert"
+              x-show="copied === item.icon_name"
+              x-on:show:toast.document="copied = $event.detail"
+              x-cloak
+              class="absolute top-0 left-0 right-0 z-50 px-2 py-1 mx-auto -mt-8 text-sm text-center text-white bg-black rounded hover:border-gray-900"
+              style="width: fit-content"
+              x-transition:enter="ease-out duration-200"
+              x-transition:enter-start="opacity-0 scale-90"
+              x-transition:enter-end="opacity-100 scale-100"
+              x-transition:leave="ease-in duration-500 "
+              x-transition:leave-start="opacity-100 scale-100"
+              x-transition:leave-end="opacity-0 scale-90"
+            >
+              <template x-if="downloadType == 'download-svg'"
+                ><span>Downloading!</span></template
               >
-                <template x-if="downloadType == 'download-svg'"
-                  ><span>Downloading!</span></template
-                >
-                <template x-if="downloadType == 'copy-cdn'"
-                  ><span>Copied URL</span></template
-                >
-                <template x-if="downloadType == 'copy-svg'"
-                  ><span>Copied SVG Code</span></template
-                >
-              </div>
+              <template x-if="downloadType == 'copy-cdn'"
+                ><span>Copied URL</span></template
+              >
+              <template x-if="downloadType == 'copy-svg'"
+                ><span>Copied SVG</span></template
+              >
             </div>
             <img
               :src="`images/icons/` + item.icon_path + `.svg`"
               :alt="item.icon_name"
-              class="transition duration-200 group-hover:scale-200"
+              class="duration-200 group-hover:scale-200"
               loading="lazy"
             />
+            <span class="hidden" x-cloak x-text="item.icon_keywords"></span>
             <p
-              class="mt-4 text-xs leading-none tracking-tight text-center text-gray-600 md:mt-8"
+              class=" absolute text-[11px] leading-snug text-left bottom-2 left-2 tracking-tight text-gray-400"
               x-text="item.icon_name"
             ></p>
-            <span class="hidden" x-text="item.icon_keywords"></span>
           </a>
         </template>
-        <div x-show="filteredIcons.length === 0" class="col-span-2">
-          <h3 class="text-xl text-gray-500">No Matches Found</h3>
-        </div>
+      </div>
+      <div x-show="filteredIcons.length === 0" class="w-full m-4 md:m-6 lg:m-8">
+        <h3 class="text-xl text-gray-500">No Matches Found</h3>
       </div>
     </main>
     <footer
-      class="flex flex-col py-8 mx-8 space-y-4 text-gray-700 border-t border-gray-300 md:space-y-0 md:flex-row"
+      class="flex flex-col py-8 mx-8 space-y-4 text-gray-700  md:space-y-0 md:flex-row"
     >
       <span>
         Project by
@@ -358,6 +360,7 @@
       function loadIcons() {
         return {
           search: "",
+          showBar: false,
           downloadType: "copy-svg",
           myForData: sourceData,
           copied: false,

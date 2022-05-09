@@ -1,20 +1,7 @@
-const path = require("path");
-const glob = require("glob-all");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const PurgecssPlugin = require("purgecss-webpack-plugin");
-
-/**
- * Custom PurgeCSS Extractor
- * https://github.com/FullHuman/purgecss
- * https://github.com/FullHuman/purgecss-webpack-plugin
- */
-class TailwindExtractor {
-  static extract(content) {
-    return content.match(/[A-z0-9-:\/]+/g);
-  }
-}
+const path = require("path");
 
 module.exports = {
   entry: "./src/css/tailwind.src.css",
@@ -23,44 +10,31 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: [
-            { loader: "css-loader", options: { importLoaders: 1 } },
-            "postcss-loader",
-          ],
-        }),
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
     ],
   },
+  devServer: {
+    static: "./dist",
+    watchFiles: path.join(__dirname, "src"),
+    hot: true,
+  },
   plugins: [
-    new ExtractTextPlugin("styles.css", {
-      disable: process.env.NODE_ENV === "development",
-    }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.html",
     }),
     /// Enable images folder
-    new CopyWebpackPlugin([
-      {
-        from: "src/images",
-        to: "images",
-      },
-    ]),
-    /// Enable js folder
-    new CopyWebpackPlugin([
-      {
-        from: "src/js",
-        to: "js",
-      },
-    ]),
-    new PurgecssPlugin({
-      paths: glob.sync([path.join(__dirname, "src/**/*.html")]),
-      extractors: [
+    new CopyWebpackPlugin({
+      patterns: [
         {
-          extractor: TailwindExtractor,
-          extensions: ["html", "js"],
+          from: "src/images",
+          to: "images",
+        },
+        {
+          from: "src/js",
+          to: "js",
         },
       ],
     }),
