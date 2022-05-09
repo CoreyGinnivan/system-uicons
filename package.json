@@ -3,7 +3,7 @@
   "scripts": {
     "zip": "node createZip.js",
     "prebuild": "npm run zip",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "dev": "cross-env NODE_ENV=development webpack serve --open",
     "prod": "npm run zip && cross-env NODE_ENV=production webpack"
   },
   "devDependencies": {

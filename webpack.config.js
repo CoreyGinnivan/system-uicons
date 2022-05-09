@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   entry: "./src/css/tailwind.src.css",
@@ -12,6 +13,11 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
     ],
+  },
+  devServer: {
+    static: "./dist",
+    watchFiles: path.join(__dirname, "src"),
+    hot: true,
   },
   plugins: [
     new MiniCssExtractPlugin(),
