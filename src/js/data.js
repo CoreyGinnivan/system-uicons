@@ -47,22 +47,26 @@ var sourceData = [
   {
     icon_name: "Phone (Portrait)",
     icon_path: "phone_portrait",
-    icon_keywords: "iphone android phone portrait mobile talk device devices electronic tech",
+    icon_keywords:
+      "iphone android phone portrait mobile talk device devices electronic tech",
   },
   {
     icon_name: "Phone (Landscape)",
     icon_path: "phone_landscape",
-    icon_keywords: "iphone android phone landscape mobile talk device devices electronic tech",
+    icon_keywords:
+      "iphone android phone landscape mobile talk device devices electronic tech",
   },
   {
     icon_name: "Phone (Alt - Portrait)",
     icon_path: "iphone_portrait",
-    icon_keywords: "iphone android phone portrait mobile talk device devices electronic tech",
+    icon_keywords:
+      "iphone android phone portrait mobile talk device devices electronic tech",
   },
   {
     icon_name: "Phone (Alt - Landscape)",
     icon_path: "iphone_landscape",
-    icon_keywords: "iphone android phone landscape mobile talk device devices electronic tech",
+    icon_keywords:
+      "iphone android phone landscape mobile talk device devices electronic tech",
   },
   {
     icon_name: "Calendar",
@@ -87,7 +91,8 @@ var sourceData = [
   {
     icon_name: "Calendar (End)",
     icon_path: "calendar_last_day",
-    icon_keywords: "calendar day month end last final year month date date time",
+    icon_keywords:
+      "calendar day month end last final year month date date time",
   },
   {
     icon_name: "Calendar (Week)",
@@ -217,12 +222,14 @@ var sourceData = [
   {
     icon_name: "Coffee",
     icon_path: "coffee",
-    icon_keywords: "coffee caffeine perk mug steam hot tea percolate drink cup wake",
+    icon_keywords:
+      "coffee caffeine perk mug steam hot tea percolate drink cup wake",
   },
   {
     icon_name: "Compass",
     icon_path: "compass",
-    icon_keywords: "compass safari direction wayfind find directions route navigation",
+    icon_keywords:
+      "compass safari direction wayfind find directions route navigation",
   },
   {
     icon_name: "Document",
@@ -277,7 +284,8 @@ var sourceData = [
   {
     icon_name: "Mail (New)",
     icon_path: "mail_new",
-    icon_keywords: "mail new email add create send receive news communicate communication",
+    icon_keywords:
+      "mail new email add create send receive news communicate communication",
   },
   {
     icon_name: "Mail (Delete)",
@@ -567,12 +575,14 @@ var sourceData = [
   {
     icon_name: "Enter",
     icon_path: "enter",
-    icon_keywords: "enter log in out exit sign sign-in sign-out 'sign out' 'sign in' 'log in' log out' login logout",
+    icon_keywords:
+      "enter log in out exit sign sign-in sign-out 'sign out' 'sign in' 'log in' log out' login logout",
   },
   {
     icon_name: "Enter (Alt)",
     icon_path: "enter_alt",
-    icon_keywords: "enter log in out exit sign sign-in sign-out 'sign out' 'sign in' 'log in' log out' login logout",
+    icon_keywords:
+      "enter log in out exit sign sign-in sign-out 'sign out' 'sign in' 'log in' log out' login logout",
   },
   {
     icon_name: "Inbox",
@@ -728,7 +738,7 @@ var sourceData = [
     icon_name: "Trash (Alt)",
     icon_path: "trash_alt",
     icon_keywords: "trash bin rubbish",
-},
+  },
   {
     icon_name: "Bell",
     icon_path: "bell",
@@ -1643,7 +1653,8 @@ var sourceData = [
   {
     icon_name: "Globe",
     icon_path: "globe",
-    icon_keywords: "globe world countries country foreign nation earth planet global location",
+    icon_keywords:
+      "globe world countries country foreign nation earth planet global location",
   },
   {
     icon_name: "GPS",
@@ -1703,7 +1714,8 @@ var sourceData = [
   {
     icon_name: "Heart (Remove)",
     icon_path: "heart_remove",
-    icon_keywords: "heart love connection favourite unfavourite favorite unfavorite like",
+    icon_keywords:
+      "heart love connection favourite unfavourite favorite unfavorite like",
   },
   {
     icon_name: "Home",
@@ -1748,7 +1760,8 @@ var sourceData = [
   {
     icon_name: "Lineweight",
     icon_path: "lineweight",
-    icon_keywords: "lineweight lines stroke weight thick thicc thickness text editing",
+    icon_keywords:
+      "lineweight lines stroke weight thick thicc thickness text editing",
   },
   {
     icon_name: "Loader",
@@ -1813,27 +1826,32 @@ var sourceData = [
   {
     icon_name: "Panel (Bottom)",
     icon_path: "panel_bottom",
-    icon_keywords: "panel bottom component align view windows windowed window app",
+    icon_keywords:
+      "panel bottom component align view windows windowed window app",
   },
   {
     icon_name: "Panel (Center)",
     icon_path: "panel_center",
-    icon_keywords: "panel center component align view windows windowed window app",
+    icon_keywords:
+      "panel center component align view windows windowed window app",
   },
   {
     icon_name: "Panel (Left)",
     icon_path: "panel_left",
-    icon_keywords: "panel left component align view windows windowed window app",
+    icon_keywords:
+      "panel left component align view windows windowed window app",
   },
   {
     icon_name: "Panel (Right)",
     icon_path: "panel_right",
-    icon_keywords: "panel right component align view windows windowed window app",
+    icon_keywords:
+      "panel right component align view windows windowed window app",
   },
   {
     icon_name: "Panel (Sectioned)",
     icon_path: "panel_sectioned",
-    icon_keywords: "panel sectioned component align view windows windowed window app",
+    icon_keywords:
+      "panel sectioned component align view windows windowed window app",
   },
   {
     icon_name: "Paper Plane",
@@ -2023,7 +2041,8 @@ var sourceData = [
   {
     icon_name: "Translate",
     icon_path: "translate",
-    icon_keywords: "translate translation language support countries country speaking",
+    icon_keywords:
+      "translate translation language support countries country speaking",
   },
   {
     icon_name: "Trophy",
@@ -2073,22 +2092,26 @@ var sourceData = [
   {
     icon_name: "Window Collapse Left",
     icon_path: "window_collapse_left",
-    icon_keywords: "window collapse left app view component windows windowed collapse expand push",
+    icon_keywords:
+      "window collapse left app view component windows windowed collapse expand push",
   },
   {
     icon_name: "Window Collapse Right",
     icon_path: "window_collapse_right",
-    icon_keywords: "window collapse right app view component windows windowed collapse expand push",
+    icon_keywords:
+      "window collapse right app view component windows windowed collapse expand push",
   },
   {
     icon_name: "Window Content",
     icon_path: "window_content",
-    icon_keywords: "window collapse app view component windows windowed collapse text browser",
+    icon_keywords:
+      "window collapse app view component windows windowed collapse text browser",
   },
   {
     icon_name: "Window",
     icon_path: "window",
-    icon_keywords: "window collapse app view component windows windowed browser",
+    icon_keywords:
+      "window collapse app view component windows windowed browser",
   },
   {
     icon_name: "Wrap Back",
