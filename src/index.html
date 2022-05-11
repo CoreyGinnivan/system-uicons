@@ -282,7 +282,7 @@
       </div>
 
       <div
-        class="grid grid-cols-2 m-4 md:m-6 lg:m-8 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-10 divide-x divide-y divide-gray-200 border-r border-b border-solid border-gray-200"
+        class="grid m-4 md:m-6 lg:m-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-10 border-t border-l"
       >
         <template x-for="(item, index) in filteredIcons" :key="index">
           <a
@@ -294,7 +294,7 @@
             item.icon_path +
             `.svg`"
             x-bind:download="downloadType === 'download-svg' && item.icon_name"
-            class="relative flex flex-col items-center justify-center h-32 p-2 text-gray-700 duration-150 ease-in-out bg-white cursor-pointer group hover:z-10 hover:shadow-xl md:h-40"
+            class="relative flex flex-col items-center justify-center h-32 p-2 text-gray-700 duration-150 ease-in-out bg-white border-r border-b cursor-pointer group hover:z-10 hover:shadow-xl md:h-40"
             @click="handleClick(item, downloadType, $event, $dispatch)"
           >
             <div
