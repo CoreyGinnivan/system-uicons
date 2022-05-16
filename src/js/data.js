@@ -985,6 +985,28 @@ var sourceData = [
     icon_keywords: "side menu navigation",
   },
   {
+    icon_name: "Signal (None)",
+    icon_path: "signal_none",
+    icon_keywords:
+      "signal radio alert commuication phone strength sign none no",
+  },
+  {
+    icon_name: "Signal (Low)",
+    icon_path: "signal_low",
+    icon_keywords: "signal radio alert commuication phone strength sign low",
+  },
+  {
+    icon_name: "Signal (Medium)",
+    icon_path: "signal_medium",
+    icon_keywords: "signal radio alert commuication phone strength sign medium",
+  },
+  {
+    icon_name: "Signal (Full)",
+    icon_path: "signal_full",
+    icon_keywords:
+      "signal radio alert commuication phone strength sign full high",
+  },
+  {
     icon_name: "Info (Circle)",
     icon_path: "info_circle",
     icon_keywords: "information circle",
@@ -1093,6 +1115,11 @@ var sourceData = [
     icon_name: "Target",
     icon_path: "target",
     icon_keywords: "target aim",
+  },
+  {
+    icon_name: "Terminal",
+    icon_path: "terminal",
+    icon_keywords: "terminal warp console dev developer hack mainframe",
   },
   {
     icon_name: "Ticket",
@@ -1315,9 +1342,29 @@ var sourceData = [
     icon_keywords: "cube box 3d ice cold",
   },
   {
+    icon_name: "Cubes",
+    icon_path: "cubes",
+    icon_keywords: "box crate carboard 3d boxes cubes",
+  },
+  {
     icon_name: "Box",
     icon_path: "box",
     icon_keywords: "box crate carboard 3d",
+  },
+  {
+    icon_name: "Box (Add)",
+    icon_path: "box_add",
+    icon_keywords: "box crate carboard 3d add new",
+  },
+  {
+    icon_name: "Box (Remove)",
+    icon_path: "box_remove",
+    icon_keywords: "box crate carboard 3d remove minus",
+  },
+  {
+    icon_name: "Boxes",
+    icon_path: "boxes",
+    icon_keywords: "box crate carboard 3d boxes cubes",
   },
   {
     icon_name: "Box (Open)",
@@ -1907,6 +1954,11 @@ var sourceData = [
     icon_name: "Pie (Third)",
     icon_path: "pie_third",
     icon_keywords: "pie third chart split fraction maths math",
+  },
+  {
+    icon_name: "Pill",
+    icon_path: "pill",
+    icon_keywords: "pill drugs pillbox medicine doctor",
   },
   {
     icon_name: "Play Button",
