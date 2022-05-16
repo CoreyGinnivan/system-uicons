@@ -993,7 +993,8 @@ var sourceData = [
   {
     icon_name: "Signal (Low)",
     icon_path: "signal_low",
-    icon_keywords: "signal radio alert commuication phone strength sign low",
+    icon_keywords:
+      "signal radio alert commuication phone strength sign low weak",
   },
   {
     icon_name: "Signal (Medium)",
@@ -1004,7 +1005,7 @@ var sourceData = [
     icon_name: "Signal (Full)",
     icon_path: "signal_full",
     icon_keywords:
-      "signal radio alert commuication phone strength sign full high",
+      "signal radio alert commuication phone strength sign full high strong",
   },
   {
     icon_name: "Info (Circle)",
