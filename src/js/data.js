@@ -1594,7 +1594,7 @@ var sourceData = [
   },
   {
     icon_name: "Stack",
-    icon_path: "stack",
+    icon_path: "episodes",
     icon_keywords: "episodes tv stack multiple",
   },
   {
